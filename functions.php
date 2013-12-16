@@ -8,6 +8,7 @@
 require_once( get_template_directory() . '/lib/init.php' );
 require_once( CHILD_DIR . '/lib/theme-js.php' );
 require_once( CHILD_DIR . '/lib/options.php' );
+require_once( CHILD_DIR . '/lib/shortcodes.php' );
 
 // Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'Jennifer Mortgage Theme (v1.6) by Top Left Creative Inc.' );
