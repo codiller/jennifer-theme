@@ -6,7 +6,8 @@
 
 // Start the engine
 require_once( get_template_directory() . '/lib/init.php' );
-require_once( CHILD_DIR.'/lib/theme-js.php' );
+require_once( CHILD_DIR . '/lib/theme-js.php' );
+require_once( CHILD_DIR . '/lib/options.php' );
 
 // Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'Jennifer Mortgage Theme (v1.6) by Top Left Creative Inc.' );
@@ -321,7 +322,7 @@ add_filter( 'genesis_footer_creds_text', 'custom_footer_creds_text' );
 function custom_footer_creds_text() { ?>
 	<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_eho.png" class="icon-eho" />
 	<div class="creds">
-		<p>Copyright &copy; 2008-<?php echo date('Y') ?> &middot; <a href="<?php echo bloginfo( 'url' ); ?>"><?php echo bloginfo( 'name' ) ?></a> &middot; Corporate NMLS# 12345</p>
+		<p>Copyright &copy; 2008-<?php echo date('Y') ?> &middot; <a href="<?php echo bloginfo( 'url' ); ?>"><?php echo bloginfo( 'name' ) ?></a> &middot; Corporate NMLS# <?php echo genesis_get_option( 'company-nmls', 'tlc-options' ); ?></p>
 		<?php wp_nav_menu( array( 'theme_location' => 'legal-menu', 'menu_class' => 'legal-menu', 'container_class' => 'legal-menu-container' ) ); ?>
 	</div><!-- end .creds-->
 	<div class="plug">

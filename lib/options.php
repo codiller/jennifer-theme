@@ -58,7 +58,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		
 		// Set the default values
 		$default_settings = array(
-			'company-nmls'   => '12345',
+			'company-nmls'   => '1222',
 			'address' => '1200 NW Marshall St Ste 910<br />Portland, OR 97209',
 		);
 		
