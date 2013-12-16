@@ -58,6 +58,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		
 		// Set the default values
 		$default_settings = array(
+			'application-url' => '',
 			'company-nmls'   => '1222',
 			'address' => '1200 NW Marshall St Ste 910<br />Portland, OR 97209',
 		);
@@ -81,6 +82,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		
 		genesis_add_option_filter( 'no_html', $this->settings_field,
 			array(
+				'application-url',
 				'company-nmls',
 				'address',
 			) );
@@ -125,6 +127,8 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 	 */
 	function contact_information() {
 		
+		echo '<p>Online Application URL:<br />';
+		echo '<input type="text" name="' . $this->get_field_name( 'application-url' ) . '" id="' . $this->get_field_id( 'application-url' ) . '" value="' . esc_attr( $this->get_field_value( 'application-url' ) ) . '" size="50" />';
 		echo '<p>Company NMLS:<br />';
 		echo '<input type="text" name="' . $this->get_field_name( 'company-nmls' ) . '" id="' . $this->get_field_id( 'company-nmls' ) . '" value="' . esc_attr( $this->get_field_value( 'company-nmls' ) ) . '" size="50" />';
 		echo '</p>';
