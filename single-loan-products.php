@@ -39,10 +39,17 @@ remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 
 /*
  *
+ * Remove Genesis Sidebar
+ *
+ */
+remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
+
+/*
+ *
  * Add loan comparison table
  *
  */
-add_action( 'genesis_before_entry_content', 'tlc_products_sidebar_entry', 4 );
+add_action( 'genesis_sidebar', 'tlc_products_sidebar_entry', 4 );
 function tlc_products_sidebar_entry() {
 	
 	// Grab the $post global variable in case we're outside the loop
