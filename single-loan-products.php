@@ -66,7 +66,7 @@ function tlc_products_sidebar_entry() {
 	<aside class="sidebar-entry">
 		<section class="widget">
 			
-			<p><a class="btn-sm" href="<?php echo blogurl(); ?>/apply-now">Apply Now!</a></p>
+			<p><a class="btn-sm" href="<?php echo site_url(); ?>/apply-now">Apply Now!</a></p>
 			
 			<div class="loan-comp-table">
 				
