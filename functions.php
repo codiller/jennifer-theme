@@ -35,7 +35,7 @@ add_image_size( 'one-half-1x1', 576, 576, TRUE );
  *
  */
 register_nav_menus( array(
-	'legal-menu' => 'Legal Menu',
+	'legal_menu' => 'Legal Menu',
 ) );
 
 /*
@@ -313,6 +313,22 @@ function tlc_sidebar_entry() {
 	
 	<?php }
 }
+
+/*
+ *
+ * Automatically select the Legal Menu for the legal_menu location
+ *
+ */
+$locations = get_theme_mod( 'nav_menu_locations' );
+$things = wp_get_nav_menus();
+if($things) {
+	foreach($things as $thing) {
+		if( $thing->name == 'Legal Menu' ) {
+			$locations['legal_menu'] = $thing->term_id;
+		}
+	}
+}
+set_theme_mod('nav_menu_locations', $locations); // set menus to locations
 
 /*
  *
