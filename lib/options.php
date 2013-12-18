@@ -40,6 +40,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 				'parent_slug' => 'genesis',
 				'page_title'  => 'Top Left Creative Theme Settings',
 				'menu_title'  => 'TLC Options',
+				'capability' => 'edit_theme_options',
 			)
 		);
 		
@@ -85,6 +86,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 				'application-url',
 				'company-nmls',
 				'address',
+				'company-selector',
 			) );
 	}
 	
@@ -115,6 +117,8 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 	function metaboxes() {
 		
 		add_meta_box('contact-information', 'Contact Information', array( $this, 'contact_information' ), $this->pagehook, 'main', 'high');
+
+		add_meta_box( 'company-selector', 'Select Company', array( $this, 'company_selector' ), $this->pagehook, 'main' );
 		
 	}
 	
@@ -136,7 +140,20 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		echo '<p>Address:</p>';
 		echo '<p><textarea name="' . $this->get_field_name( 'address' ) . '" cols="78" rows="8">' . esc_textarea( $this->get_field_value( 'address' ) ) . '</textarea></p>';		
 	}
-	
+
+	function company_selector() { ?>
+
+		<p>Select your Company:<br />
+			<label for="<?php echo $this->get_field_id( 'company_selector' ); ?>">Company:</label>
+			<select name="<?php echo $this->get_field_name( 'company_selector' ); ?>" id="<?php echo $this->get_field_id( 'company_selector' ); ?>">
+				<option value="tlc">*Top Left Creative*</option>
+				<option value="chl">Citywide Home Loans</option>
+				<option value="nwmg">Northwest Mortgage Group</option>
+				<option value="prmi">Primary Residential Mortgage, Inc.</option>
+			</select>
+		</p>
+
+	<?php }
 	
 }
  
