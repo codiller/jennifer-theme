@@ -59,10 +59,6 @@ genesis_register_sidebar( array(
 	'id' => 'tab-three',
 	'name' => 'Home Tab Three',
 ) );
-genesis_register_sidebar( array(
-	'id' => 'entry-with-sidebar',
-	'name' => 'Entry With Sidebar',
-) );
 
 /*
  *
