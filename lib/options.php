@@ -141,15 +141,17 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		echo '<p><textarea name="' . $this->get_field_name( 'address' ) . '" cols="78" rows="8">' . esc_textarea( $this->get_field_value( 'address' ) ) . '</textarea></p>';		
 	}
 
-	function company_selector() { ?>
+	function company_selector() {
+
+		$current = $this->get_field_value( 'company_selector' ); ?>
 
 		<p>Select your Company:<br />
 			<label for="<?php echo $this->get_field_id( 'company_selector' ); ?>">Company:</label>
 			<select name="<?php echo $this->get_field_name( 'company_selector' ); ?>" id="<?php echo $this->get_field_id( 'company_selector' ); ?>">
-				<option value="tlc">*Top Left Creative*</option>
-				<option value="chl">Citywide Home Loans</option>
-				<option value="nwmg">Northwest Mortgage Group</option>
-				<option value="prmi">Primary Residential Mortgage, Inc.</option>
+				<option value="tlc"<?php selected( $current, 'tlc' ); ?>>*Top Left Creative*</option>
+				<option value="chl"<?php selected( $current, 'chl' ); ?>>Citywide Home Loans</option>
+				<option value="nwmg"<?php selected( $current, 'nwmg' ); ?>>Northwest Mortgage Group</option>
+				<option value="prmi"<?php selected( $current, 'prmi' ); ?>>Primary Residential Mortgage, Inc.</option>
 			</select>
 		</p>
 
