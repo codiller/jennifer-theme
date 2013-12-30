@@ -69,7 +69,7 @@ function tlc_employee_directory_listing() {
 		'orderby' =>'title',
 		'order' =>'asc',
 		'post_type' =>'employees',
-		'title' => 'underwriting-manager,compliance-manager,marketing-manager,office-manager,front-desk,underwriter,junior-underwriter,processor,junior-processor,closer,funder,loan-coordinator'
+		'title' => 'underwriting-manager,compliance-manager,marketing-manager,office-manager,front-desk,underwriter,junior-underwriter,processor,junior-processor,closer,funder,loan-coordinator,processing-manager,processing-assistant'
 	);
 	$my = new WP_Query( $args );
 
@@ -107,7 +107,7 @@ function tlc_employee_directory_listing() {
 		'orderby' =>'title',
 		'order' =>'asc',
 		'post_type' =>'employees',
-		'title' => 'loan-officer'
+		'title' => 'loan-officer,senior-loan-officer,reverse-mortgage-loan-officer'
 	);
 	$my = new WP_Query( $args );
 

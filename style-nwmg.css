@@ -450,7 +450,7 @@ table {
 /* ------------------------------------------------------------
    Button Classes
    ------------------------------------------------------------ */
-.btn-sm, .directory-listings .employees .employee-actions li.emp-apply a, .single-employees .employee-actions li.apply {
+.btn-sm, .directory-listings .employees .employee-actions li.emp-apply a, .single-employees .employee-actions li.apply a {
   background: #4e8322;
   border: none;
   -webkit-border-radius: 0px;
@@ -474,7 +474,7 @@ table {
   padding: 6px 10px;
   padding: 0.6rem 1rem;
 }
-.btn-sm:hover, .directory-listings .employees .employee-actions li.emp-apply a:hover, .single-employees .employee-actions li.apply:hover {
+.btn-sm:hover, .directory-listings .employees .employee-actions li.emp-apply a:hover, .single-employees .employee-actions li.apply a:hover {
   background: #1e320d;
   color: white;
 }

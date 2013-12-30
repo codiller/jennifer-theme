@@ -6,7 +6,9 @@
 
 // Start the engine
 require_once( get_template_directory() . '/lib/init.php' );
-require_once( CHILD_DIR.'/lib/theme-js.php' );
+require_once( CHILD_DIR . '/lib/theme-js.php' );
+require_once( CHILD_DIR . '/lib/options.php' );
+require_once( CHILD_DIR . '/lib/shortcodes.php' );
 
 // Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'Jennifer Mortgage Theme (v1.6) by Top Left Creative Inc.' );
@@ -33,7 +35,7 @@ add_image_size( 'one-half-1x1', 576, 576, TRUE );
  *
  */
 register_nav_menus( array(
-	'legal-menu' => 'Legal Menu',
+	'legal_menu' => 'Legal Menu',
 ) );
 
 /*
@@ -56,10 +58,6 @@ genesis_register_sidebar( array(
 genesis_register_sidebar( array(
 	'id' => 'tab-three',
 	'name' => 'Home Tab Three',
-) );
-genesis_register_sidebar( array(
-	'id' => 'entry-with-sidebar',
-	'name' => 'Entry With Sidebar',
 ) );
 
 /*
@@ -171,56 +169,17 @@ function jtd_gform_init_scripts( $form ) {
    Layout Customizations
    ------------------------------------------------------------ */
 
-/*
- *
- * Add the script to change the stylesheet using the theme chooser (NOTE: REMOVE THIS WHEN YOU INSTALL ON A CLIENT SITE)
- *
- */
-function tlc_add_theme_switcher() {
-	wp_register_style( 'style_prmi', get_stylesheet_directory_uri() . '/style-prmi.css' );
-	wp_register_style( 'style_nwmg', get_stylesheet_directory_uri() . '/style-nwmg.css' );
-	wp_register_style( 'style_chl', get_stylesheet_directory_uri() . '/style-chl.css' );
-	wp_register_script( 'alternate_stylesheet', get_stylesheet_directory_uri() . '/lib/js/styleswitcher.js' );
-	wp_enqueue_style( 'style_prmi' );
-	wp_enqueue_style( 'style_nwmg' );
-	wp_enqueue_style( 'style_chl' );
-	wp_enqueue_script( 'alternate_stylesheet' );
-	global $wp_styles;
-	$wp_styles->add_data( 'style_prmi', 'title', 'style_prmi' );
-	$wp_styles->add_data( 'style_nwmg', 'title', 'style_nwmg' );
-	$wp_styles->add_data( 'style_chl', 'title', 'style_chl' );
-	$handle  = defined( 'CHILD_THEME_NAME' ) && CHILD_THEME_NAME ? sanitize_title_with_dashes( CHILD_THEME_NAME ) : 'child-theme';
-	$wp_styles->add_data( $handle, 'title', 'default_child_theme' );
-}
-add_action( 'wp_enqueue_scripts', 'tlc_add_theme_switcher' );
+function tlc_company_stylesheet_selector() {
+	
+	$company = genesis_get_option( 'company_selector', 'tlc-options' );
 
-/*
- *
- * Add the alternate theme chooser (NOTE: REMOVE THIS WHEN YOU INSTALL ON A CLIENT SITE)
- *
- */
-add_action( 'genesis_before_header', 'tlc_theme_chooser' );
-function tlc_theme_chooser() { ?>
-	<div class="theme-chooser">
-		<p>Choose Your Company:</p>
-		<form>
-			<select name="choose-company" id="choose-company" onchange="getval(this);">
-				<option value="">Choose Your Company...</option>
-				<option value="default_child_theme">Top Left Creative</option>
-				<option value="style_prmi">Primary Residential Mortgage, Inc.</option>
-				<option value="style_nwmg">Northwest Mortgage Group</option>
-				<option value="style_chl">CityWide Home Loans</option>
-			</select>
-			<script>
-				function getval( sel ) {
-					setActiveStyleSheet( sel.value );
-					setCookie( 'choose-company', this.value );
-					return false;
-				}
-			</script>
-		</form>
-	</div>
-<?php }
+	wp_register_style( 'style_' . $company, get_stylesheet_directory_uri() . '/style-' . $company . '.css', '', '', 'screen' );
+	wp_enqueue_style( 'style_' . $company );
+
+}
+add_action( 'wp_enqueue_scripts', 'tlc_company_stylesheet_selector' );
+
+
 
 /*
  *
@@ -314,6 +273,22 @@ function tlc_sidebar_entry() {
 
 /*
  *
+ * Automatically select the Legal Menu for the legal_menu location
+ *
+ */
+$locations = get_theme_mod( 'nav_menu_locations' );
+$things = wp_get_nav_menus();
+if($things) {
+	foreach($things as $thing) {
+		if( $thing->name == 'Legal Menu' ) {
+			$locations['legal_menu'] = $thing->term_id;
+		}
+	}
+}
+set_theme_mod('nav_menu_locations', $locations); // set menus to locations
+
+/*
+ *
  * Customize the footer credits
  *
  */
@@ -321,7 +296,7 @@ add_filter( 'genesis_footer_creds_text', 'custom_footer_creds_text' );
 function custom_footer_creds_text() { ?>
 	<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_eho.png" class="icon-eho" />
 	<div class="creds">
-		<p>Copyright &copy; 2008-<?php echo date('Y') ?> &middot; <a href="<?php echo bloginfo( 'url' ); ?>"><?php echo bloginfo( 'name' ) ?></a> &middot; Corporate NMLS# 12345</p>
+		<p>Copyright &copy; 2008-<?php echo date('Y') ?> &middot; <a href="<?php echo bloginfo( 'url' ); ?>"><?php echo bloginfo( 'name' ) ?></a> &middot; Corporate NMLS# <?php echo genesis_get_option( 'company-nmls', 'tlc-options' ); ?></p>
 		<?php wp_nav_menu( array( 'theme_location' => 'legal-menu', 'menu_class' => 'legal-menu', 'container_class' => 'legal-menu-container' ) ); ?>
 	</div><!-- end .creds-->
 	<div class="plug">
