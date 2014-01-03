@@ -11,7 +11,7 @@ require_once( CHILD_DIR . '/lib/options.php' );
 require_once( CHILD_DIR . '/lib/shortcodes.php' );
 
 // Child theme (do not remove)
-define( 'CHILD_THEME_NAME', 'Jennifer Mortgage Theme (v1.6) by Top Left Creative Inc.' );
+define( 'CHILD_THEME_NAME', 'Jennifer Mortgage Theme by Top Left Creative' );
 define( 'CHILD_THEME_URL', 'http://topleftcreative.com/' );
 
 /* ------------------------------------------------------------
@@ -169,6 +169,11 @@ function jtd_gform_init_scripts( $form ) {
    Layout Customizations
    ------------------------------------------------------------ */
 
+/*
+ *
+ * Enqueues the correct stylesheet based on the company selected in TLC Options
+ *
+ */
 function tlc_company_stylesheet_selector() {
 	
 	$company = genesis_get_option( 'company_selector', 'tlc-options' );
@@ -178,8 +183,6 @@ function tlc_company_stylesheet_selector() {
 
 }
 add_action( 'wp_enqueue_scripts', 'tlc_company_stylesheet_selector' );
-
-
 
 /*
  *
