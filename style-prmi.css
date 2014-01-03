@@ -935,7 +935,9 @@ button[type=submit]:hover {
   padding: 16px 16px;
   padding: 1.6rem 1.6rem;
 }
-.entry p {
+.entry p,
+.entry ul,
+.entry li {
   line-height: 1.5;
   margin-bottom: 12px;
   margin-bottom: 1.2rem;
