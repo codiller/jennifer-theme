@@ -989,6 +989,11 @@ button[type=submit]:hover {
 .footer-widgets .widget-area:last-child {
   margin-right: 0;
 }
+.footer-widgets .widget-area p {
+  line-height: 1.5;
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+}
 @media only screen and (max-width: 1152px) {
   .footer-widgets .wrap {
     border-left: 0;
