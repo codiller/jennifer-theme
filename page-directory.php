@@ -22,6 +22,7 @@ function tlc_employee_directory_listing() {
 		'orderby' =>'menu_order',
 		'order' =>'asc',
 		'post_type' =>'employees',
+		'posts_per_page' => '-1'
 	);
 	$my = new WP_Query( $args );
 
