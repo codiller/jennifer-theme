@@ -297,7 +297,7 @@ set_theme_mod('nav_menu_locations', $locations); // set menus to locations
  */
 add_filter( 'genesis_footer_creds_text', 'custom_footer_creds_text' );
 function custom_footer_creds_text() { ?>
-	<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_eho.png" class="icon-eho" />
+	<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_ehl.png" class="icon-ehl" alt="Equal Housing Lender" />
 	<div class="creds">
 		<p>Copyright &copy; 2008-<?php echo date('Y') ?> &middot; <a href="<?php echo bloginfo( 'url' ); ?>"><?php echo bloginfo( 'name' ) ?></a> &middot; Corporate NMLS# <?php echo genesis_get_option( 'company-nmls', 'tlc-options' ); ?>
 			<?php if( genesis_get_option( 'website_type', 'tlc-options') == 'individual' ) {

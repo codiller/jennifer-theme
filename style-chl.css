@@ -1025,6 +1025,9 @@ button[type=submit]:hover {
   padding: 16px 0px;
   padding: 1.6rem 0rem;
 }
+.site-footer .icon-ehl {
+  width: 32px;
+}
 .site-footer .creds p {
   margin: 0;
 }
