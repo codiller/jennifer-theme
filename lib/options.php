@@ -60,7 +60,8 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		// Set the default values
 		$default_settings = array(
 			'application-url' => '',
-			'company-nmls'   => '1222',
+			'company-nmls'   => '12345',
+			'individual-nmls' => '12345',
 			'address' => '1200 NW Marshall St Ste 910, Portland, OR 97209',
 		);
 		
@@ -85,6 +86,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 			array(
 				'application-url',
 				'company-nmls',
+				'individual-nmls',
 				'address',
 				'company-selector',
 				'website-type',
@@ -137,7 +139,9 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		echo '<p>Company NMLS:<br />';
 		echo '<input type="text" name="' . $this->get_field_name( 'company-nmls' ) . '" id="' . $this->get_field_id( 'company-nmls' ) . '" value="' . esc_attr( $this->get_field_value( 'company-nmls' ) ) . '" size="50" />';
 		echo '</p>';
-	
+		echo '<p>Individual NMLS:<br />';
+		echo '<input type="text" name="' . $this->get_field_name( 'individual-nmls' ) . '" id="' . $this->get_field_id( 'individual-nmls' ) . '" value="' . esc_attr( $this->get_field_value( 'individual-nmls' ) ) . '" size="50" />';
+		echo '</p>';
 		echo '<p>Address:</p>';
 		echo '<p><textarea name="' . $this->get_field_name( 'address' ) . '" cols="78" rows="8">' . esc_textarea( $this->get_field_value( 'address' ) ) . '</textarea></p>';		
 	}
