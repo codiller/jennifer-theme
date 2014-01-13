@@ -87,6 +87,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 				'company-nmls',
 				'address',
 				'company-selector',
+				'website-type',
 			) );
 	}
 	
@@ -118,7 +119,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		
 		add_meta_box('contact-information', 'Contact Information', array( $this, 'contact_information' ), $this->pagehook, 'main', 'high');
 
-		add_meta_box( 'company-selector', 'Select Company', array( $this, 'company_selector' ), $this->pagehook, 'main' );
+		add_meta_box( 'website-options', 'Website Options', array( $this, 'website_options' ), $this->pagehook, 'main' );
 		
 	}
 	
@@ -141,17 +142,27 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		echo '<p><textarea name="' . $this->get_field_name( 'address' ) . '" cols="78" rows="8">' . esc_textarea( $this->get_field_value( 'address' ) ) . '</textarea></p>';		
 	}
 
-	function company_selector() {
+	function website_options() {
 
-		$current = $this->get_field_value( 'company_selector' ); ?>
+		$current_company = $this->get_field_value( 'company_selector' ); ?>
 
 		<p>Select your Company:<br />
 			<label for="<?php echo $this->get_field_id( 'company_selector' ); ?>">Company:</label>
 			<select name="<?php echo $this->get_field_name( 'company_selector' ); ?>" id="<?php echo $this->get_field_id( 'company_selector' ); ?>">
-				<option value="tlc"<?php selected( $current, 'tlc' ); ?>>*Top Left Creative*</option>
-				<option value="chl"<?php selected( $current, 'chl' ); ?>>Citywide Home Loans</option>
-				<option value="nwmg"<?php selected( $current, 'nwmg' ); ?>>Northwest Mortgage Group</option>
-				<option value="prmi"<?php selected( $current, 'prmi' ); ?>>Primary Residential Mortgage, Inc.</option>
+				<option value="tlc"<?php selected( $current_company, 'tlc' ); ?>>*Top Left Creative*</option>
+				<option value="chl"<?php selected( $current_company, 'chl' ); ?>>Citywide Home Loans</option>
+				<option value="nwmg"<?php selected( $current_company, 'nwmg' ); ?>>Northwest Mortgage Group</option>
+				<option value="prmi"<?php selected( $current_company, 'prmi' ); ?>>Primary Residential Mortgage, Inc.</option>
+			</select>
+		</p>
+
+	<?php $current_website_type = $this->get_field_value( 'website_type' ); ?>
+
+		<p>Select the Website Type:<br />
+			<label for="<?php echo $this->get_field_id( 'website_type' ); ?>">Website Type:</label>
+			<select name="<?php echo $this->get_field_name( 'website_type' ); ?>" id="<?php echo $this->get_field_id( 'website_type' ); ?>">
+				<option value="individual"<?php selected( $current_website_type, 'individual' ); ?>>Individual</option>
+				<option value="company"<?php selected( $current_website_type, 'company' ); ?>>Company</option>
 			</select>
 		</p>
 
