@@ -63,6 +63,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 			'company-nmls'   => '12345',
 			'individual-nmls' => '12345',
 			'address' => '1200 NW Marshall St Ste 910, Portland, OR 97209',
+			'phone' => '(801) 923-8220',
 		);
 		
 		// Create the Admin Page
@@ -88,6 +89,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 				'company-nmls',
 				'individual-nmls',
 				'address',
+				'phone',
 				'company-selector',
 				'website-type',
 			) );
@@ -143,7 +145,9 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		echo '<input type="text" name="' . $this->get_field_name( 'individual-nmls' ) . '" id="' . $this->get_field_id( 'individual-nmls' ) . '" value="' . esc_attr( $this->get_field_value( 'individual-nmls' ) ) . '" size="50" />';
 		echo '</p>';
 		echo '<p>Address:</p>';
-		echo '<p><textarea name="' . $this->get_field_name( 'address' ) . '" cols="78" rows="8">' . esc_textarea( $this->get_field_value( 'address' ) ) . '</textarea></p>';		
+		echo '<p><textarea name="' . $this->get_field_name( 'address' ) . '" cols="78" rows="8">' . esc_textarea( $this->get_field_value( 'address' ) ) . '</textarea></p>';
+		echo '<p>Phone Number:<br />';
+		echo '<input type="text" name="' . $this->get_field_name( 'phone' ) . '" id="' . $this->get_field_id( 'phone' ) . '" value="' . esc_attr( $this->get_field_value( 'phone' ) ) . '" size="50" />';
 	}
 
 	function website_options() {
