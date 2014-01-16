@@ -161,6 +161,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 				<option value="chl"<?php selected( $current_company, 'chl' ); ?>>Citywide Home Loans</option>
 				<option value="nwmg"<?php selected( $current_company, 'nwmg' ); ?>>Northwest Mortgage Group</option>
 				<option value="prmi"<?php selected( $current_company, 'prmi' ); ?>>Primary Residential Mortgage, Inc.</option>
+				<option value="rhm"<?php selected( $current_company, 'rhm' ); ?>>Red Hills Mortgage</option>
 			</select>
 		</p>
 
