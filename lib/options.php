@@ -92,6 +92,10 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 				'phone',
 				'company-selector',
 				'website-type',
+				'facebook-url',
+				'twitter-url',
+				'linkedin-url',
+				'googleplus-url',
 			) );
 	}
 	
@@ -124,6 +128,8 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		add_meta_box('contact-information', 'Contact Information', array( $this, 'contact_information' ), $this->pagehook, 'main', 'high');
 
 		add_meta_box( 'website-options', 'Website Options', array( $this, 'website_options' ), $this->pagehook, 'main' );
+
+		add_meta_box( 'social-media-accounts', 'Social Media Accounts', array( $this, 'social_media_accounts' ), $this->pagehook, 'main' );
 		
 	}
 	
@@ -176,6 +182,21 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		</p>
 
 	<?php }
+
+	function social_media_accounts() {
+		
+		echo '<p>Facebook URL:<br />';
+		echo '<input type="text" name="' . $this->get_field_name( 'facebook-url' ) . '" id="' . $this->get_field_id( 'facebook-url' ) . '" value="' . esc_attr( $this->get_field_value( 'facebook-url' ) ) . '" size="50" />';
+		echo '<p>Twitter URL:<br />';
+		echo '<input type="text" name="' . $this->get_field_name( 'twitter-url' ) . '" id="' . $this->get_field_id( 'twitter-url' ) . '" value="' . esc_attr( $this->get_field_value( 'twitter-url' ) ) . '" size="50" />';
+		echo '</p>';
+		echo '<p>LinkedIn URL:<br />';
+		echo '<input type="text" name="' . $this->get_field_name( 'linkedin-url' ) . '" id="' . $this->get_field_id( 'linkedin-url' ) . '" value="' . esc_attr( $this->get_field_value( 'linkedin-url' ) ) . '" size="50" />';
+		echo '</p>';
+		echo '<p>Google Plus URL:<br />';
+		echo '<input type="text" name="' . $this->get_field_name( 'googleplus-url' ) . '" id="' . $this->get_field_id( 'googleplus-url' ) . '" value="' . esc_attr( $this->get_field_value( 'googleplus-url' ) ) . '" size="50" />';
+		echo '</p>';
+	}
 	
 }
  
