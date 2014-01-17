@@ -176,13 +176,62 @@ function jtd_gform_init_scripts( $form ) {
  */
 function tlc_company_stylesheet_selector() {
 	
-	$company = genesis_get_option( 'company_selector', 'tlc-options' );
+	$company = genesis_get_option( 'company_selector', 'tlc_options' );
 
 	wp_register_style( 'style_' . $company, get_stylesheet_directory_uri() . '/style-' . $company . '.css', '', '', 'screen' );
 	wp_enqueue_style( 'style_' . $company );
 
 }
 add_action( 'wp_enqueue_scripts', 'tlc_company_stylesheet_selector' );
+
+/*
+ *
+ * Add the mobile menu button for mobile dropdown menu
+ *
+ */
+add_action( 'genesis_before_header', 'tlc_pre_header' );
+function tlc_pre_header() { ?>
+
+	<section class="pre-header">
+		<div class="wrap">
+			<div class="pre-header-left">
+
+				<?php if( genesis_get_option( 'facebook_url', 'tlc_options' ) ) { ?>
+					<a href="<?php echo genesis_get_option( 'facebook_url', 'tlc_options' ); ?>" target="_blank">
+						<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_facebook.jpg" class="social-media-icon" />
+					</a>
+				<?php } ?>
+
+				<?php if( genesis_get_option( 'twitter_url', 'tlc_options' ) ) { ?>
+					<a href="<?php echo genesis_get_option( 'twitter_url', 'tlc_options' ); ?>" target="_blank">
+						<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_twitter.jpg" class="social-media-icon" />
+					</a>
+				<?php } ?>
+
+				<?php if( genesis_get_option( 'linkedin_url', 'tlc_options' ) ) { ?>
+					<a href="<?php echo genesis_get_option( 'linkedin_url', 'tlc_options' ); ?>" target="_blank">
+						<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_linkedin.jpg" class="social-media-icon" />
+					</a>
+				<?php } ?>
+
+				<?php if( genesis_get_option( 'googleplus_url', 'tlc_options' ) ) { ?>
+					<a href="<?php echo genesis_get_option( 'googleplus_url', 'tlc_options' ); ?>" target="_blank">
+						<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_googleplus.jpg" class="social-media-icon" />
+					</a>
+				<?php } ?>
+
+			</div>
+			<div class="pre-header-right">
+
+				<?php if( genesis_get_option( 'phone', 'tlc_options' ) ) { ?>
+					<p class="call"><?php echo genesis_get_option( 'phone', 'tlc_options' ); ?></p>
+				<?php } ?>
+
+			</div>
+		</div><!-- end .wrap-->
+	</section><!-- end .pre-header-->
+
+<?php }
 
 /*
  *
@@ -299,9 +348,9 @@ add_filter( 'genesis_footer_creds_text', 'custom_footer_creds_text' );
 function custom_footer_creds_text() { ?>
 	<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_ehl.png" class="icon-ehl" alt="Equal Housing Lender" />
 	<div class="creds">
-		<p>Copyright &copy; 2008-<?php echo date('Y') ?> &middot; <a href="<?php echo bloginfo( 'url' ); ?>"><?php echo bloginfo( 'name' ) ?></a> &middot; Corporate NMLS #<?php echo genesis_get_option( 'company-nmls', 'tlc-options' ); ?>
-			<?php if( genesis_get_option( 'website_type', 'tlc-options') == 'individual' ) {
-				echo ' &middot; Individual NMLS #' . genesis_get_option( 'individual-nmls', 'tlc-options' );
+		<p>Copyright &copy; 2008-<?php echo date('Y') ?> &middot; <a href="<?php echo bloginfo( 'url' ); ?>"><?php echo bloginfo( 'name' ) ?></a> &middot; Corporate NMLS #<?php echo genesis_get_option( 'company_nmls', 'tlc_options' ); ?>
+			<?php if( genesis_get_option( 'website_type', 'tlc_options') == 'individual' ) {
+				echo ' &middot; Individual NMLS #' . genesis_get_option( 'individual_nmls', 'tlc_options' );
 			} ?>
 		</p>
 		<?php wp_nav_menu( array( 'theme_location' => 'legal-menu', 'menu_class' => 'legal-menu', 'container_class' => 'legal-menu-container' ) ); ?>

@@ -32,7 +32,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 	function __construct() {
 		
 		// Specify a unique page ID. 
-		$page_id = 'top-left-creative';
+		$page_id = 'top_left_creative';
 		
 		// Set it as a child to genesis, and define the menu and page titles
 		$menu_ops = array(
@@ -46,7 +46,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		
 		// Set up page options. These are optional, so only uncomment if you want to change the defaults
 		$page_ops = array(
-		//	'screen_icon'       => 'options-general',
+		//	'screen_icon'       => 'options_general',
 		//	'save_button_text'  => 'Save Settings',
 		//	'reset_button_text' => 'Reset Settings',
 		//	'save_notice_text'  => 'Settings saved.',
@@ -54,14 +54,14 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		);		
 		
 		// Give it a unique settings field. 
-		// You'll access them from genesis_get_option( 'option_name', 'tlc-options' );
-		$settings_field = 'tlc-options';
+		// You'll access them from genesis_get_option( 'option_name', 'tlc_options' );
+		$settings_field = 'tlc_options';
 		
 		// Set the default values
 		$default_settings = array(
-			'application-url' => '',
-			'company-nmls'   => '12345',
-			'individual-nmls' => '12345',
+			'application_url' => '',
+			'company_nmls'   => '12345',
+			'individual_nmls' => '12345',
 			'address' => '1200 NW Marshall St Ste 910, Portland, OR 97209',
 			'phone' => '(801) 923-8220',
 		);
@@ -85,17 +85,17 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		
 		genesis_add_option_filter( 'no_html', $this->settings_field,
 			array(
-				'application-url',
-				'company-nmls',
-				'individual-nmls',
+				'application_url',
+				'company_nmls',
+				'individual_nmls',
 				'address',
 				'phone',
-				'company-selector',
-				'website-type',
-				'facebook-url',
-				'twitter-url',
-				'linkedin-url',
-				'googleplus-url',
+				'company_selector',
+				'website_type',
+				'facebook_url',
+				'twitter_url',
+				'linkedin_url',
+				'googleplus_url',
 			) );
 	}
 	
@@ -125,11 +125,11 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 	 */
 	function metaboxes() {
 		
-		add_meta_box('contact-information', 'Contact Information', array( $this, 'contact_information' ), $this->pagehook, 'main', 'high');
+		add_meta_box('contact_information', 'Contact Information', array( $this, 'contact_information' ), $this->pagehook, 'main', 'high');
 
-		add_meta_box( 'website-options', 'Website Options', array( $this, 'website_options' ), $this->pagehook, 'main' );
+		add_meta_box( 'website_options', 'Website Options', array( $this, 'website_options' ), $this->pagehook, 'main' );
 
-		add_meta_box( 'social-media-accounts', 'Social Media Accounts', array( $this, 'social_media_accounts' ), $this->pagehook, 'main' );
+		add_meta_box( 'social_media_accounts', 'Social Media Accounts', array( $this, 'social_media_accounts' ), $this->pagehook, 'main' );
 		
 	}
 	
@@ -143,12 +143,12 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 	function contact_information() {
 		
 		echo '<p>Online Application URL:<br />';
-		echo '<input type="text" name="' . $this->get_field_name( 'application-url' ) . '" id="' . $this->get_field_id( 'application-url' ) . '" value="' . esc_attr( $this->get_field_value( 'application-url' ) ) . '" size="50" />';
+		echo '<input type="text" name="' . $this->get_field_name( 'application_url' ) . '" id="' . $this->get_field_id( 'application_url' ) . '" value="' . esc_attr( $this->get_field_value( 'application_url' ) ) . '" size="50" />';
 		echo '<p>Company NMLS:<br />';
-		echo '<input type="text" name="' . $this->get_field_name( 'company-nmls' ) . '" id="' . $this->get_field_id( 'company-nmls' ) . '" value="' . esc_attr( $this->get_field_value( 'company-nmls' ) ) . '" size="50" />';
+		echo '<input type="text" name="' . $this->get_field_name( 'company_nmls' ) . '" id="' . $this->get_field_id( 'company_nmls' ) . '" value="' . esc_attr( $this->get_field_value( 'company_nmls' ) ) . '" size="50" />';
 		echo '</p>';
 		echo '<p>Individual NMLS:<br />';
-		echo '<input type="text" name="' . $this->get_field_name( 'individual-nmls' ) . '" id="' . $this->get_field_id( 'individual-nmls' ) . '" value="' . esc_attr( $this->get_field_value( 'individual-nmls' ) ) . '" size="50" />';
+		echo '<input type="text" name="' . $this->get_field_name( 'individual_nmls' ) . '" id="' . $this->get_field_id( 'individual_nmls' ) . '" value="' . esc_attr( $this->get_field_value( 'individual_nmls' ) ) . '" size="50" />';
 		echo '</p>';
 		echo '<p>Address:</p>';
 		echo '<p><textarea name="' . $this->get_field_name( 'address' ) . '" cols="78" rows="8">' . esc_textarea( $this->get_field_value( 'address' ) ) . '</textarea></p>';
@@ -186,15 +186,15 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 	function social_media_accounts() {
 		
 		echo '<p>Facebook URL:<br />';
-		echo '<input type="text" name="' . $this->get_field_name( 'facebook-url' ) . '" id="' . $this->get_field_id( 'facebook-url' ) . '" value="' . esc_attr( $this->get_field_value( 'facebook-url' ) ) . '" size="50" />';
+		echo '<input type="text" name="' . $this->get_field_name( 'facebook_url' ) . '" id="' . $this->get_field_id( 'facebook_url' ) . '" value="' . esc_attr( $this->get_field_value( 'facebook_url' ) ) . '" size="50" />';
 		echo '<p>Twitter URL:<br />';
-		echo '<input type="text" name="' . $this->get_field_name( 'twitter-url' ) . '" id="' . $this->get_field_id( 'twitter-url' ) . '" value="' . esc_attr( $this->get_field_value( 'twitter-url' ) ) . '" size="50" />';
+		echo '<input type="text" name="' . $this->get_field_name( 'twitter_url' ) . '" id="' . $this->get_field_id( 'twitter_url' ) . '" value="' . esc_attr( $this->get_field_value( 'twitter_url' ) ) . '" size="50" />';
 		echo '</p>';
 		echo '<p>LinkedIn URL:<br />';
-		echo '<input type="text" name="' . $this->get_field_name( 'linkedin-url' ) . '" id="' . $this->get_field_id( 'linkedin-url' ) . '" value="' . esc_attr( $this->get_field_value( 'linkedin-url' ) ) . '" size="50" />';
+		echo '<input type="text" name="' . $this->get_field_name( 'linkedin_url' ) . '" id="' . $this->get_field_id( 'linkedin_url' ) . '" value="' . esc_attr( $this->get_field_value( 'linkedin_url' ) ) . '" size="50" />';
 		echo '</p>';
 		echo '<p>Google Plus URL:<br />';
-		echo '<input type="text" name="' . $this->get_field_name( 'googleplus-url' ) . '" id="' . $this->get_field_id( 'googleplus-url' ) . '" value="' . esc_attr( $this->get_field_value( 'googleplus-url' ) ) . '" size="50" />';
+		echo '<input type="text" name="' . $this->get_field_name( 'googleplus_url' ) . '" id="' . $this->get_field_id( 'googleplus_url' ) . '" value="' . esc_attr( $this->get_field_value( 'googleplus_url' ) ) . '" size="50" />';
 		echo '</p>';
 	}
 	

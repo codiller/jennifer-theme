@@ -814,6 +814,51 @@ button[type=submit]:hover {
 }
 
 /* ------------------------------------------------------------
+   Pre-Header
+   ------------------------------------------------------------ */
+.pre-header {
+  background: #dcdcda;
+  border-bottom: white 1px solid;
+  overflow: hidden;
+  position: relative;
+  z-index: 100;
+}
+.pre-header .wrap {
+  border-left: 1px white solid;
+  border-right: 1px white solid;
+}
+.pre-header .pre-header-left {
+  float: left;
+  overflow: hidden;
+  padding: 8px 8px;
+  padding: 0.8rem 0.8rem;
+  width: 50%;
+}
+.pre-header .pre-header-left .social-media-icon {
+  float: left;
+  padding-right: 8px;
+  padding-right: 0.8rem;
+}
+.pre-header .pre-header-right {
+  float: right;
+  overflow: hidden;
+  padding: 8px 8px;
+  padding: 0.8rem 0.8rem;
+  width: 50%;
+}
+.pre-header .pre-header-right .call {
+  color: #002554;
+  font-size: 27px;
+  font-size: 2.7rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.home .pre-header {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* ------------------------------------------------------------
    Header
    ------------------------------------------------------------ */
 .site-header {
@@ -1394,7 +1439,7 @@ form.email p label {
    ------------------------------------------------------------ */
 /* Home Feature Widget Area */
 .home-feature {
-  margin-top: -150px;
+  margin-top: -144px;
   z-index: 1;
 }
 .home-feature h3 {
