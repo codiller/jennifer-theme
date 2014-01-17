@@ -599,7 +599,7 @@ body {
    ------------------------------------------------------------ */
 a,
 a:hover {
-  color: #61415c;
+  color: #720800;
   -moz-transition: all 0.1s ease-in-out;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
@@ -630,7 +630,7 @@ h6 a {
 
 h1,
 h1 a {
-  color: #61415c;
+  color: #720800;
   font-size: 36px;
   font-size: 3.6rem;
   text-transform: uppercase;
@@ -638,7 +638,7 @@ h1 a {
 
 h2,
 h2 a {
-  color: #939193;
+  color: #4b1e24;
   font-size: 30px;
   font-size: 3rem;
   text-transform: uppercase;
@@ -646,7 +646,7 @@ h2 a {
 
 h3,
 h3 a {
-  color: #939193;
+  color: #808381;
   font-size: 24px;
   font-size: 2.4rem;
 }
@@ -674,13 +674,13 @@ h6 a {
    Content
    ------------------------------------------------------------ */
 .section-title {
-  background: #61415c;
-  background: -moz-linear-gradient(left, #61415c 0%, white 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #61415c), color-stop(100%, white));
-  background: -webkit-linear-gradient(left, #61415c 0%, white 100%);
-  background: -o-linear-gradient(left, #61415c 0%, white 100%);
-  background: -ms-linear-gradient(left, #61415c 0%, white 100%);
-  background: linear-gradient(to right, #61415c 0%, white 100%);
+  background: #720800;
+  background: -moz-linear-gradient(left, #720800 0%, white 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #720800), color-stop(100%, white));
+  background: -webkit-linear-gradient(left, #720800 0%, white 100%);
+  background: -o-linear-gradient(left, #720800 0%, white 100%);
+  background: -ms-linear-gradient(left, #720800 0%, white 100%);
+  background: linear-gradient(to right, #720800 0%, white 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='#ffffff',GradientType=1 );
   color: white;
   padding: 24px 24px;
@@ -689,11 +689,11 @@ h6 a {
 
 .entry-title,
 .entry-title a {
-  color: #61415c;
+  color: #720800;
 }
 
 .entry-subtitle {
-  color: #939193;
+  color: #4b1e24;
   font-style: italic;
 }
 
@@ -839,7 +839,7 @@ button[type=submit]:hover {
 
 .title-area {
   float: left;
-  width: 266px;
+  width: 231px;
 }
 .title-area .site-title {
   margin: 8px 8px;
@@ -848,15 +848,15 @@ button[type=submit]:hover {
 }
 .title-area .site-title a {
   background: url("images/logo_rhm.png") no-repeat;
-  background-size: 250px auto;
+  background-size: 215px auto;
   display: block;
-  height: 107px;
+  height: 100px;
   margin: 0;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .title-area .site-title a {
     background: url("images/logo_rhm@2x.png") no-repeat;
-    background-size: 250px auto;
+    background-size: 215px auto;
   }
 }
 .title-area .site-description {
@@ -865,16 +865,16 @@ button[type=submit]:hover {
 }
 @media only screen and (max-width: 576px) {
   .title-area {
-    width: 191.5px;
+    width: 165.25px;
   }
   .title-area .site-title {
     margin: 3px 3px;
     margin: 0.3rem 0.3rem;
   }
   .title-area .site-title a {
-    background-size: 187.5px auto;
-    height: 80.25px;
-    width: 187.5px;
+    background-size: 161.25px auto;
+    height: 75px;
+    width: 161.25px;
   }
 }
 
@@ -894,8 +894,8 @@ button[type=submit]:hover {
 @media only screen and (max-width: 960px) {
   .menu-toggle {
     display: block;
-    padding: 34.5px 12px;
-    padding: 3.45rem 1.2rem;
+    padding: 31px 12px;
+    padding: 3.1rem 1.2rem;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -1068,18 +1068,18 @@ img {
 }
 .genesis-nav-menu a {
   border-left: white 1px solid;
-  color: #61415c;
+  color: #720800;
   display: block;
   font-family: 'Open Sans', sans-serif;
-  padding: 50.5px 12px;
-  padding: 5.05rem 1.2rem;
+  padding: 47px 12px;
+  padding: 4.7rem 1.2rem;
   position: relative;
   text-decoration: none;
 }
 .genesis-nav-menu a:hover,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .current-menu-ancestor > a {
-  background: #61415c;
+  background: #720800;
   color: white;
 }
 @media only screen and (max-width: 1152px) {
@@ -1087,8 +1087,8 @@ img {
     border: 0;
     font-size: 12px;
     font-size: 1.2rem;
-    padding: 53.25px 12px;
-    padding: 5.325rem 1.2rem;
+    padding: 49.75px 12px;
+    padding: 4.975rem 1.2rem;
   }
 }
 @media only screen and (max-width: 960px) {
@@ -1231,7 +1231,7 @@ img {
 
 .widgettitle,
 .widgettitle a {
-  color: #61415c;
+  color: #720800;
 }
 
 /* ------------------------------------------------------------
@@ -1335,7 +1335,7 @@ form.email p label {
   text-align: center;
 }
 .loan-comp-item p.large {
-  color: #61415c;
+  color: #720800;
   font-size: 24px;
   font-size: 2.4rem;
   font-weight: 700;
@@ -1738,7 +1738,7 @@ form.email p label {
 }
 
 .single-employees .menu-directory a {
-  background: #61415c;
+  background: #720800;
   color: white;
 }
 
@@ -1802,7 +1802,7 @@ form.email p label {
    Single Template - Loan Products
    ------------------------------------------------------------ */
 .single-loan-products .menu-item-307 a {
-  background: #61415c;
+  background: #720800;
   color: white;
 }
 .single-loan-products .sidebar .btn {
@@ -1922,7 +1922,7 @@ div.csSBWidget span {
 }
 .resp-tab-active h2,
 .resp-tab-content-active h2 {
-  color: #61415c;
+  color: #720800;
 }
 
 .resp-tab-content {
