@@ -196,34 +196,44 @@ function tlc_pre_header() { ?>
 		<div class="wrap">
 			<div class="pre-header-left">
 
-				<?php if( genesis_get_option( 'facebook_url', 'tlc_options' ) ) { ?>
-					<a href="<?php echo genesis_get_option( 'facebook_url', 'tlc_options' ); ?>" target="_blank">
-						<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_facebook.jpg" class="social-media-icon" />
-					</a>
-				<?php } ?>
-
-				<?php if( genesis_get_option( 'twitter_url', 'tlc_options' ) ) { ?>
-					<a href="<?php echo genesis_get_option( 'twitter_url', 'tlc_options' ); ?>" target="_blank">
-						<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_twitter.jpg" class="social-media-icon" />
-					</a>
-				<?php } ?>
-
-				<?php if( genesis_get_option( 'linkedin_url', 'tlc_options' ) ) { ?>
-					<a href="<?php echo genesis_get_option( 'linkedin_url', 'tlc_options' ); ?>" target="_blank">
-						<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_linkedin.jpg" class="social-media-icon" />
-					</a>
-				<?php } ?>
-
-				<?php if( genesis_get_option( 'googleplus_url', 'tlc_options' ) ) { ?>
-					<a href="<?php echo genesis_get_option( 'googleplus_url', 'tlc_options' ); ?>" target="_blank">
-						<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_googleplus.jpg" class="social-media-icon" />
-					</a>
-				<?php } ?>
+				
 
 			</div>
 			<div class="pre-header-right">
 
-				<?php if( genesis_get_option( 'phone', 'tlc_options' ) ) { ?>
+				<?php if( genesis_get_option( 'facebook_url', 'tlc_options' ) || genesis_get_option( 'twitter_url', 'tlc_options' ) || genesis_get_option( 'linkedin_url', 'tlc_options' ) || genesis_get_option( 'googleplus_url', 'tlc_options' ) ) {
+
+					echo '<div class="social-media-icons">';
+
+					if( genesis_get_option( 'facebook_url', 'tlc_options' ) ) { ?>
+						<a href="<?php echo genesis_get_option( 'facebook_url', 'tlc_options' ); ?>" target="_blank">
+							<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_facebook.jpg" class="social-media-icon" />
+						</a>
+					<?php }
+
+					if( genesis_get_option( 'twitter_url', 'tlc_options' ) ) { ?>
+						<a href="<?php echo genesis_get_option( 'twitter_url', 'tlc_options' ); ?>" target="_blank">
+							<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_twitter.jpg" class="social-media-icon" />
+						</a>
+					<?php }
+
+					if( genesis_get_option( 'linkedin_url', 'tlc_options' ) ) { ?>
+						<a href="<?php echo genesis_get_option( 'linkedin_url', 'tlc_options' ); ?>" target="_blank">
+							<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_linkedin.jpg" class="social-media-icon" />
+						</a>
+					<?php }
+
+					if( genesis_get_option( 'googleplus_url', 'tlc_options' ) ) { ?>
+						<a href="<?php echo genesis_get_option( 'googleplus_url', 'tlc_options' ); ?>" target="_blank">
+							<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_googleplus.jpg" class="social-media-icon" />
+						</a>
+					<?php }
+
+					echo '</div><!-- end .social-media-icons-->';
+
+				}
+
+				if( genesis_get_option( 'phone', 'tlc_options' ) ) { ?>
 					<p class="call"><?php echo genesis_get_option( 'phone', 'tlc_options' ); ?></p>
 				<?php } ?>
 
