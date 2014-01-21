@@ -531,6 +531,10 @@ p {
   margin: 0;
 }
 
+.wp-editor p {
+  margin-bottom: 16px;
+}
+
 ul {
   margin: 0;
 }

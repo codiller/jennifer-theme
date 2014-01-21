@@ -704,6 +704,10 @@ p {
   margin: 0;
 }
 
+.wp-editor p {
+  margin-bottom: 16px;
+}
+
 ul {
   margin: 0;
 }
@@ -834,11 +838,6 @@ button[type=submit]:hover {
   padding: 0.8rem 0.8rem;
   width: 50%;
 }
-.pre-header .pre-header-left .social-media-icon {
-  float: left;
-  padding-right: 8px;
-  padding-right: 0.8rem;
-}
 .pre-header .pre-header-right {
   float: right;
   overflow: hidden;
@@ -852,6 +851,47 @@ button[type=submit]:hover {
   font-size: 2.7rem;
   font-weight: 700;
   text-align: right;
+}
+.pre-header .pre-header-right .call:after {
+  content: "\2003";
+}
+.pre-header .pre-header-right .social-media-icons {
+  float: right;
+  overflow: hidden;
+}
+.pre-header .pre-header-right .social-media-icons a {
+  text-decoration: none;
+}
+.pre-header .pre-header-right .social-media-icon {
+  float: left;
+  margin: 0px 0px;
+  margin: 0rem 0rem;
+  padding: 0 0 0 8px;
+}
+@media only screen and (max-width: 960px) {
+  .pre-header .pre-header-left {
+    float: none;
+    width: 100%;
+  }
+  .pre-header .pre-header-right {
+    float: none;
+    width: 100%;
+  }
+  .pre-header .pre-header-right .call {
+    text-align: center;
+  }
+  .pre-header .pre-header-right .call:after {
+    content: "";
+  }
+  .pre-header .pre-header-right .social-media-icons {
+    float: none;
+    text-align: center;
+  }
+  .pre-header .pre-header-right .social-media-icon {
+    float: none;
+    padding: 0px 0px;
+    padding: 0rem 0rem;
+  }
 }
 
 .home .pre-header {
