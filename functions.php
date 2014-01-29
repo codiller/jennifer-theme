@@ -323,7 +323,7 @@ function tlc_sidebar_entry() {
 	remove_action( 'genesis_sidebar', 'genesis_do_sidebar' ); ?>
 	<aside class="sidebar-entry">
 		<section class="widget">
-			<?php echo get_post_meta( $post->ID, 'wpcf-entry-sidebar-content', true ); ?>
+			<?php echo do_shortcode( get_post_meta( $post->ID, 'wpcf-entry-sidebar-content', true ) ); ?>
 		</section><!-- end .widget-->
 	</aside><!-- end .sidebar-entry-->
 	<aside class="sidebar-entry">
