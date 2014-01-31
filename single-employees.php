@@ -31,7 +31,13 @@ function tlc_employee_header() {
 		<ul class="employee-actions">
 			<li class="emp-nmls">NMLS #: <?php echo get_post_meta( get_the_ID(), 'wpcf-nmls', true ); ?></li>
 			<li class="apply"><a href="<?php echo get_post_meta( get_the_ID(), 'wpcf-online-application-link', true ); ?>" target="_blank">Apply Now</a></li>
-			<li class="emp-callbox">Call Me: <?php echo get_post_meta( get_the_ID(), 'wpcf-mobile-phone', true ); ?></li>
+			<li class="emp-callbox">
+				<?php if( get_post_meta( get_the_ID(), 'wpcf-mobile-phone', true ) ) {
+					echo 'Call Me: ' .  get_post_meta( get_the_ID(), 'wpcf-mobile-phone', true );
+				} elseif( get_post_meta( get_the_ID(), 'wpcf-main-phone', true ) ) {
+					echo 'Call Me: ' .  get_post_meta( get_the_ID(), 'wpcf-main-phone', true );
+				} ?>
+			</li>
 		</ul><!-- end .employee-actions-->
 	<?php }
 	
