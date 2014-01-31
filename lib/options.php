@@ -59,11 +59,6 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		
 		// Set the default values
 		$default_settings = array(
-			'application_url' => '',
-			'company_nmls'   => '12345',
-			'individual_nmls' => '12345',
-			'address' => '1200 NW Marshall St Ste 910, Portland, OR 97209',
-			'phone' => '(801) 923-8220',
 		);
 		
 		// Create the Admin Page
