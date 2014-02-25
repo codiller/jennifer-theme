@@ -62,6 +62,26 @@ genesis_register_sidebar( array(
 
 /*
  *
+ * Add custom post types
+ *
+ */
+require_once( get_stylesheet_directory() . '/lib/cpt/tlc_cpt_testimonials.php' );
+
+/*
+ *
+ * Initialize the Metaboxes Class
+ *
+ */
+add_action( 'init', 'tlc_initialize_cmb_meta_boxes', 9999 );
+function tlc_initialize_cmb_meta_boxes() {
+	if ( !class_exists( 'cmb_Meta_Box' ) ) {
+		require_once( 'lib/metaboxes/init.php' );
+		require_once( 'lib/tlc_metaboxes.php' );
+	}
+}
+
+/*
+ *
  * Add support for css stylings in the wysiwyg editor
  *
  */
@@ -163,6 +183,20 @@ function jtd_gform_init_scripts( $form ) {
 	}
 	GFFormDisplay::add_init_script($form["id"], 'jtd_placeholder', GFFormDisplay::ON_PAGE_RENDER, $script);
 	return $form;
+}
+
+/*
+ *
+ * New RoyalSlider Custom Skin
+ *
+ */
+add_filter( 'new_royalslider_skins', 'new_royalslider_add_custom_skin', 10, 2 );
+function new_royalslider_add_custom_skin( $skins ) {
+      $skins['rsNaked'] = array(
+           'label' => 'Custom Naked Skin',
+           'path' => get_stylesheet_directory_uri() . '/lib/royalslider/skins/rs-naked.css'  // get_stylesheet_directory_uri returns path to your theme folder
+      );
+      return $skins;
 }
 
 /* ------------------------------------------------------------
