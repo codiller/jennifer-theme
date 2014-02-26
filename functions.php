@@ -384,14 +384,14 @@ function tlc_sidebar_entry() {
  */
 $locations = get_theme_mod( 'nav_menu_locations' );
 $things = wp_get_nav_menus();
-if($things) {
-	foreach($things as $thing) {
+if( $things ) {
+	foreach( $things as $thing ) {
 		if( $thing->name == 'Legal Menu' ) {
 			$locations['legal_menu'] = $thing->term_id;
 		}
 	}
 }
-set_theme_mod('nav_menu_locations', $locations); // set menus to locations
+set_theme_mod( 'nav_menu_locations', $locations ); // set menus to locations
 
 /*
  *
