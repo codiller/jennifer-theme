@@ -133,6 +133,16 @@ add_theme_support( 'genesis-structural-wraps', array( 'header', 'nav', 'subnav',
  */
 add_theme_support( 'genesis-footer-widgets', 3 );
 
+/*
+ *
+ * Display favicon at the root
+ *
+ */
+add_filter( 'genesis_pre_load_favicon', 'tlc_favicon_filter' );
+function tlc_favicon_filter( $favicon_url ) {
+	return site_url() . '/favicon.ico';
+}
+
 /* ------------------------------------------------------------
    Plugin Customizations
    ------------------------------------------------------------ */
