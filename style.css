@@ -613,7 +613,9 @@ h1 a,
 h2,
 h2 a,
 h3,
+.home-testimonials .rsTmb,
 h3 a,
+.home-testimonials .rsTmb a,
 h4,
 h4 a,
 h5,
@@ -644,8 +646,9 @@ h2 a {
   text-transform: uppercase;
 }
 
-h3,
-h3 a {
+h3, .home-testimonials .rsTmb,
+h3 a,
+.home-testimonials .rsTmb a {
   color: #ffe500;
   font-size: 24px;
   font-size: 2.4rem;
@@ -1482,7 +1485,7 @@ form.email p label {
   margin-top: -144px;
   z-index: 1;
 }
-.home-feature h3 {
+.home-feature h3, .home-feature .home-testimonials .rsTmb, .home-testimonials .home-feature .rsTmb {
   background: rgba(255, 255, 255, 0.75);
   color: #4a4d55;
   font-size: 48px;
@@ -1528,7 +1531,7 @@ form.email p label {
   .home-feature {
     margin-top: 0;
   }
-  .home-feature h3 {
+  .home-feature h3, .home-feature .home-testimonials .rsTmb, .home-testimonials .home-feature .rsTmb {
     font-size: 36px;
     font-size: 3.6rem;
     padding: 12px 12px;
@@ -1572,7 +1575,7 @@ form.email p label {
   }
 }
 @media only screen and (max-width: 768px) {
-  .home-feature h3 {
+  .home-feature h3, .home-feature .home-testimonials .rsTmb, .home-testimonials .home-feature .rsTmb {
     font-size: 24px;
     font-size: 2.4rem;
     padding: 8px 8px;
@@ -1616,7 +1619,7 @@ form.email p label {
   }
 }
 @media only screen and (max-width: 576px) {
-  .home-feature h3 {
+  .home-feature h3, .home-feature .home-testimonials .rsTmb, .home-testimonials .home-feature .rsTmb {
     font-size: 16px;
     font-size: 1.6rem;
     padding: 4px 4px;
@@ -1700,6 +1703,7 @@ form.email p label {
   }
 }
 
+/* Home Footer Testimonials Slider */
 /* ------------------------------------------------------------
    Page Template - Employee Directory
    ------------------------------------------------------------ */
