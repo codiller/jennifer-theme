@@ -846,10 +846,12 @@ button[type=submit]:hover {
   overflow: hidden;
   padding: 8px 8px;
   padding: 0.8rem 0.8rem;
+  text-align: right;
   width: 50%;
 }
 .pre-header .pre-header-right .call {
   color: #720800;
+  display: inline-block;
   font-size: 27px;
   font-size: 2.7rem;
   font-weight: 700;
@@ -859,7 +861,7 @@ button[type=submit]:hover {
   content: "\2003";
 }
 .pre-header .pre-header-right .social-media-icons {
-  float: right;
+  display: inline-block;
   overflow: hidden;
 }
 .pre-header .pre-header-right .social-media-icons a {

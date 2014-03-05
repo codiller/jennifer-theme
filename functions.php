@@ -239,14 +239,20 @@ function tlc_pre_header() { ?>
 
 	<section class="pre-header">
 		<div class="wrap">
-			<div class="pre-header-left">
+			
+			<div class="pre-header-left"></div>
 
-				
-
-			</div>
 			<div class="pre-header-right">
 
-				<?php if( genesis_get_option( 'facebook_url', 'tlc_options' ) || genesis_get_option( 'twitter_url', 'tlc_options' ) || genesis_get_option( 'linkedin_url', 'tlc_options' ) || genesis_get_option( 'googleplus_url', 'tlc_options' ) ) {
+				<?php
+
+				if( genesis_get_option( 'phone', 'tlc_options' ) ) { ?>
+					
+					<p class="call"><?php echo genesis_get_option( 'phone', 'tlc_options' ); ?></p>
+
+				<?php }
+
+				if( genesis_get_option( 'facebook_url', 'tlc_options' ) || genesis_get_option( 'twitter_url', 'tlc_options' ) || genesis_get_option( 'linkedin_url', 'tlc_options' ) || genesis_get_option( 'googleplus_url', 'tlc_options' ) ) {
 
 					echo '<div class="social-media-icons">';
 
@@ -276,11 +282,7 @@ function tlc_pre_header() { ?>
 
 					echo '</div><!-- end .social-media-icons-->';
 
-				}
-
-				if( genesis_get_option( 'phone', 'tlc_options' ) ) { ?>
-					<p class="call"><?php echo genesis_get_option( 'phone', 'tlc_options' ); ?></p>
-				<?php } ?>
+				} ?>
 
 			</div>
 		</div><!-- end .wrap-->
