@@ -857,19 +857,16 @@ button[type=submit]:hover {
   font-weight: 700;
   text-align: right;
 }
-.pre-header .pre-header-right .call:after {
-  content: "\2003";
-}
 .pre-header .pre-header-right .social-media-icons {
   display: inline;
+  float: right;
   overflow: hidden;
 }
 .pre-header .pre-header-right .social-media-icons a {
-  float: right;
   text-decoration: none;
 }
 .pre-header .pre-header-right .social-media-icon {
-  float: right;
+  float: left;
   margin: 0px 0px;
   margin: 0rem 0rem;
   padding: 0 0 0 8px;
