@@ -258,25 +258,25 @@ function tlc_pre_header() { ?>
 
 					if( genesis_get_option( 'facebook_url', 'tlc_options' ) ) { ?>
 						<a href="<?php echo genesis_get_option( 'facebook_url', 'tlc_options' ); ?>" target="_blank">
-							<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_facebook.jpg" class="social-media-icon" width="32px" />
+							<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_facebook.jpg" class="social-media-icon" />
 						</a>
 					<?php }
 
 					if( genesis_get_option( 'twitter_url', 'tlc_options' ) ) { ?>
 						<a href="<?php echo genesis_get_option( 'twitter_url', 'tlc_options' ); ?>" target="_blank">
-							<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_twitter.jpg" class="social-media-icon" width="32px" />
+							<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_twitter.jpg" class="social-media-icon" />
 						</a>
 					<?php }
 
 					if( genesis_get_option( 'linkedin_url', 'tlc_options' ) ) { ?>
 						<a href="<?php echo genesis_get_option( 'linkedin_url', 'tlc_options' ); ?>" target="_blank">
-							<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_linkedin.jpg" class="social-media-icon" width="32px" />
+							<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_linkedin.jpg" class="social-media-icon" />
 						</a>
 					<?php }
 
 					if( genesis_get_option( 'googleplus_url', 'tlc_options' ) ) { ?>
 						<a href="<?php echo genesis_get_option( 'googleplus_url', 'tlc_options' ); ?>" target="_blank">
-							<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_googleplus.jpg" class="social-media-icon" width="32px" />
+							<img src="<?php echo bloginfo( 'stylesheet_directory' ); ?>/images/logo_googleplus.jpg" class="social-media-icon" />
 						</a>
 					<?php }
 
