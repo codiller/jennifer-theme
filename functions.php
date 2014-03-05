@@ -14,6 +14,7 @@ require_once( CHILD_DIR . '/lib/shortcodes.php' );
 define( 'CHILD_THEME_NAME', 'Jennifer Mortgage Theme by Top Left Creative' );
 define( 'CHILD_THEME_URL', 'http://topleftcreative.com/' );
 
+
 /* ------------------------------------------------------------
    WordPress Customizations
    ------------------------------------------------------------ */
