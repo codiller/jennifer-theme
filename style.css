@@ -851,7 +851,7 @@ button[type=submit]:hover {
 }
 .pre-header .pre-header-right .call {
   color: #e62514;
-  display: inline-block;
+  display: inline;
   font-size: 27px;
   font-size: 2.7rem;
   font-weight: 700;
@@ -861,14 +861,14 @@ button[type=submit]:hover {
   content: "\2003";
 }
 .pre-header .pre-header-right .social-media-icons {
-  display: inline-block;
+  display: inline;
   overflow: hidden;
 }
 .pre-header .pre-header-right .social-media-icons a {
   text-decoration: none;
 }
 .pre-header .pre-header-right .social-media-icon {
-  float: left;
+  float: right;
   margin: 0px 0px;
   margin: 0rem 0rem;
   padding: 0 0 0 8px;
