@@ -231,7 +231,7 @@ add_action( 'wp_enqueue_scripts', 'tlc_company_stylesheet_selector' );
 
 /*
  *
- * Add the mobile menu button for mobile dropdown menu
+ * Add the pre-header area
  *
  */
 add_action( 'genesis_before_header', 'tlc_pre_header' );
