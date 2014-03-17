@@ -330,8 +330,12 @@ add_action( 'genesis_entry_header', 'genesis_do_post_image', 5 );
  */
 add_action( 'genesis_entry_header', 'tlc_featured_image', 5 );
 function tlc_featured_image() {
-	if( is_page() || is_single() && has_post_thumbnail() ) {
-		echo '<div class="featured-image">' . the_post_thumbnail( 'two-thirds-2x1' ) . '</div><!-- end .featured-image-->';
+	if( is_single() || is_page() ) {
+		if( has_post_thumbnail() ) {
+			echo '<div class="featured-image">';
+			the_post_thumbnail( 'two-thirds-2x1' );
+			echo '</div><!-- end .featured-image-->';
+		}
 	}
 }
 
