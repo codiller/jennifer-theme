@@ -247,7 +247,7 @@ function tlc_pre_header() { ?>
 
 				<?php
 
-				if( genesis_get_option( 'phone', 'tlc_options' ) ) { ?>
+				if( genesis_get_option( 'phone', 'tlc_options' ) && genesis_get_option( 'phone_checkbox', 'tlc_options' ) ) { ?>
 					
 					<p class="call"><?php echo genesis_get_option( 'phone', 'tlc_options' ); ?></p>
 
@@ -255,7 +255,7 @@ function tlc_pre_header() { ?>
 
 				if( genesis_get_option( 'locations_page', 'tlc_options' ) ) { ?>
 
-					<p class="locations"><?php echo genesis_get_option( 'locations_page', 'tlc_options' ); ?></p>
+					<p class="locations"><a href="<?php echo genesis_get_option( 'locations_page', 'tlc_options' ); ?>">Find A Branch</a></p>
 
 				<?php }
 

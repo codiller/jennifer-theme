@@ -91,6 +91,8 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 				'twitter_url',
 				'linkedin_url',
 				'googleplus_url',
+				'phone_checkbox',
+				'locations_checkbox',
 			) );
 
 		genesis_add_option_filter( 'safe_html', $this->settings_field,
@@ -144,17 +146,24 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		
 		echo '<p>Online Application URL:<br />';
 		echo '<input type="text" name="' . $this->get_field_name( 'application_url' ) . '" id="' . $this->get_field_id( 'application_url' ) . '" value="' . esc_attr( $this->get_field_value( 'application_url' ) ) . '" size="50" />';
+		echo '</p>';
 		echo '<p>Company NMLS:<br />';
 		echo '<input type="text" name="' . $this->get_field_name( 'company_nmls' ) . '" id="' . $this->get_field_id( 'company_nmls' ) . '" value="' . esc_attr( $this->get_field_value( 'company_nmls' ) ) . '" size="50" />';
 		echo '</p>';
 		echo '<p>Individual NMLS:<br />';
 		echo '<input type="text" name="' . $this->get_field_name( 'individual_nmls' ) . '" id="' . $this->get_field_id( 'individual_nmls' ) . '" value="' . esc_attr( $this->get_field_value( 'individual_nmls' ) ) . '" size="50" />';
 		echo '</p>';
-		echo '<p>Address:</p>';
-		echo '<p><textarea name="' . $this->get_field_name( 'address' ) . '" cols="78" rows="8">' . esc_textarea( $this->get_field_value( 'address' ) ) . '</textarea></p>';
+		echo '<p>Address:<br />';
+		echo '<textarea name="' . $this->get_field_name( 'address' ) . '" cols="78" rows="8">' . esc_textarea( $this->get_field_value( 'address' ) ) . '</textarea>';
+		echo '</p>';
 		echo '<p>Phone Number:<br />';
-		echo '<input type="text" name="' . $this->get_field_name( 'phone' ) . '" id="' . $this->get_field_id( 'phone' ) . '" value="' . esc_attr( $this->get_field_value( 'phone' ) ) . '" size="50" />';
-		echo '<input type="text" name="' . $this->get_field_name( 'locations_page' ) . '" id="' . $this->get_field_id( 'locations_page' ) . '" value="' . esc_attr( $this->get_field_value( 'locations_page' ) ) . '" size="50" />';
+		echo '<input type="text" name="' . $this->get_field_name( 'phone' ) . '" id="' . $this->get_field_id( 'phone' ) . '" value="' . esc_attr( $this->get_field_value( 'phone' ) ) . '" size="50" /><br />';
+		echo '<input type="checkbox" name="' . $this->get_field_name( 'phone_checkbox' ) . '" id="' . $this->get_field_id( 'phone_checkbox' ) . '" value="1"' . checked( 1, $this->get_field_value( 'phone_checkbox' ), false ) . '" /><label for' . $this->get_field_name( 'phone_checkbox' ) . '>Check to Include in Header</label>';
+		echo '</p>';
+		echo '<p>Link to Locations Page:<br />';
+		echo '<input type="text" name="' . $this->get_field_name( 'locations_page' ) . '" id="' . $this->get_field_id( 'locations_page' ) . '" value="' . esc_attr( $this->get_field_value( 'locations_page' ) ) . '" size="50" /><br />';
+		echo '<input type="checkbox" name="' . $this->get_field_name( 'locations_checkbox' ) . '" id="' . $this->get_field_id( 'locations_checkbox' ) . '" value="1"' . checked( 1, $this->get_field_value( 'locations_checkbox' ), false ) . '" /><label for' . $this->get_field_name( 'location_checkbox' ) . '>Check to Include in Header</label>';
+		echo '</p>';
 	}
 
 	function website_options() {
