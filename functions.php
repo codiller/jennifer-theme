@@ -24,6 +24,7 @@ define( 'CHILD_THEME_URL', 'http://topleftcreative.com/' );
  * Add custom image sizes
  *
  */
+add_image_size( 'one-third', 384, 256, TRUE );
 add_image_size( 'one-third-2x1', 368, 184, TRUE );
 add_image_size( 'one-third-1x1', 368, 368, TRUE );
 add_image_size( 'two-thirds-2x1', 768, 384, TRUE );
@@ -249,6 +250,12 @@ function tlc_pre_header() { ?>
 				if( genesis_get_option( 'phone', 'tlc_options' ) ) { ?>
 					
 					<p class="call"><?php echo genesis_get_option( 'phone', 'tlc_options' ); ?></p>
+
+				<?php }
+
+				if( genesis_get_option( 'locations_page', 'tlc_options' ) ) { ?>
+
+					<p class="locations"><?php echo genesis_get_option( 'locations_page', 'tlc_options' ); ?></p>
 
 				<?php }
 

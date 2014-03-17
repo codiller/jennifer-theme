@@ -92,6 +92,11 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 				'linkedin_url',
 				'googleplus_url',
 			) );
+
+		genesis_add_option_filter( 'safe_html', $this->settings_field,
+			array(
+				'locations_page',
+			) );
 	}
 	
 	/**
@@ -149,6 +154,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		echo '<p><textarea name="' . $this->get_field_name( 'address' ) . '" cols="78" rows="8">' . esc_textarea( $this->get_field_value( 'address' ) ) . '</textarea></p>';
 		echo '<p>Phone Number:<br />';
 		echo '<input type="text" name="' . $this->get_field_name( 'phone' ) . '" id="' . $this->get_field_id( 'phone' ) . '" value="' . esc_attr( $this->get_field_value( 'phone' ) ) . '" size="50" />';
+		echo '<input type="text" name="' . $this->get_field_name( 'locations_page' ) . '" id="' . $this->get_field_id( 'locations_page' ) . '" value="' . esc_attr( $this->get_field_value( 'locations_page' ) ) . '" size="50" />';
 	}
 
 	function website_options() {
