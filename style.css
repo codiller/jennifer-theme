@@ -8,8 +8,8 @@
  * Author: Top Left Creative
  * Author URI: http://topleftcreative.com
  * Template: genesis
- * Version: 1.7.3.1
- * Updated: March 5, 2014
+ * Version: 1.7.3.2
+ * Updated: March 18, 2014
  *
  */
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
@@ -1136,6 +1136,10 @@ button[type=submit]:hover {
   width: 32px;
 }
 .site-footer .creds p {
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+}
+.site-footer .creds p.disclaimer {
   margin: 0;
 }
 .site-footer .gototop {

@@ -85,6 +85,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 				'individual_nmls',
 				'address',
 				'phone',
+				'disclaimer',
 				'company_selector',
 				'website_type',
 				'facebook_url',
@@ -163,6 +164,9 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		echo '<p>Link to Locations Page:<br />';
 		echo '<input type="text" name="' . $this->get_field_name( 'locations_page' ) . '" id="' . $this->get_field_id( 'locations_page' ) . '" value="' . esc_attr( $this->get_field_value( 'locations_page' ) ) . '" size="50" /><br />';
 		echo '<input type="checkbox" name="' . $this->get_field_name( 'locations_checkbox' ) . '" id="' . $this->get_field_id( 'locations_checkbox' ) . '" value="1"' . checked( 1, $this->get_field_value( 'locations_checkbox' ), false ) . '" /><label for' . $this->get_field_name( 'location_checkbox' ) . '>Check to Include in Header</label>';
+		echo '</p>';
+		echo '<p>Disclaimer:<br />';
+		echo '<input type="text" name="' . $this->get_field_name( 'disclaimer' ) . '" id="' . $this->get_field_id( 'disclaimer' ) . '" value="' . esc_attr( $this->get_field_value( 'disclaimer' ) ) . '" size="50" />';
 		echo '</p>';
 	}
 

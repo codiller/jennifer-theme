@@ -413,7 +413,10 @@ function custom_footer_creds_text() { ?>
 				echo ' &middot; Individual NMLS #' . genesis_get_option( 'individual_nmls', 'tlc_options' );
 			} ?>
 		</p>
-		<?php wp_nav_menu( array( 'theme_location' => 'legal-menu', 'menu_class' => 'legal-menu', 'container_class' => 'legal-menu-container' ) ); ?>
+		<?php if( genesis_get_option( 'disclaimer', 'tlc_options' ) ) {
+			echo '<p class="disclaimer">' . genesis_get_option( 'disclaimer', 'tlc_options' ) . '</p>';
+		}
+		wp_nav_menu( array( 'theme_location' => 'legal-menu', 'menu_class' => 'legal-menu', 'container_class' => 'legal-menu-container' ) ); ?>
 	</div><!-- end .creds-->
 	<div class="plug">
 		<p>Fully-Managed <a href="http://topleftcreative.com" target="_blank">Mortgage Websites</a> by Top Left Creative</p>
