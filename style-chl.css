@@ -1139,7 +1139,7 @@ button[type=submit]:hover {
   margin-bottom: 24px;
   margin-bottom: 2.4rem;
 }
-.site-footer .creds p.disclaimer {
+.site-footer .creds p:last-of-type {
   margin: 0;
 }
 .site-footer .gototop {
