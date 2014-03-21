@@ -2,7 +2,7 @@
 
 /*
  *
- * Register custom post type - testimonials
+ * Register custom post type - tlc_testimonials
  *
  */
 add_action( 'init', 'register_cpt_testimonials' );
