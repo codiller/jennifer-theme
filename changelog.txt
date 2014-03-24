@@ -1,5 +1,9 @@
+/** Version 1.7.3.3 **/
+
+* Changed Equal Housing Lender logo to Equal Housing Opportunity Logo.
+
 /** Version 1.7.3.2 **/
 
-* Added disclaimer in TLC options
-* Added disclaimer in footer
-* Added CSS for disclaimer in footer
+* Added disclaimer in TLC options.
+* Added disclaimer in footer.
+* Added CSS for disclaimer in footer.
