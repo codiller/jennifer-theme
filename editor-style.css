@@ -1,72 +1,58 @@
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700);
-@import url(//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
-@import url(//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
 /* ------------------------------------------------------------
    WordPress Classes
    ------------------------------------------------------------ */
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700);
+@import url(//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
+@import url(//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
 .alignleft {
-  text-align: left;
-}
+  text-align: left; }
 
 .aligncenter {
-  text-align: center;
-}
+  text-align: center; }
 
 .alignright {
-  text-align: right;
-}
+  text-align: right; }
 
 /* ------------------------------------------------------------
    Layout Classes
    ------------------------------------------------------------ */
 .floatleft {
-  float: left;
-}
+  float: left; }
 
 .center {
-  text-align: center;
-}
+  text-align: center; }
 
 /* ------------------------------------------------------------
    Column Classes
    ------------------------------------------------------------ */
 .full {
   margin-right: 0;
-  width: 100%;
-}
+  width: 100%; }
 
 .half {
   float: left;
   margin-bottom: 16px;
   margin-right: 1.38889%;
-  width: 49.30556%;
-}
-.half:nth-child(2n) {
-  margin-right: 0;
-}
-.half:nth-child(2n + 1) {
-  clear: left;
-}
-@media only screen and (max-width: 768px) {
-  .half {
-    float: none;
-    margin-right: 0;
-    width: 100%;
-  }
-}
+  width: 49.30556%; }
+  .half:nth-child(2n) {
+    margin-right: 0; }
+  .half:nth-child(2n + 1) {
+    clear: left; }
+  @media only screen and (max-width: 768px) {
+    .half {
+      float: none;
+      margin-right: 0;
+      width: 100%; } }
 
 .third {
   float: left;
   margin-bottom: 16px;
   margin-right: 1.38889%;
-  width: 32.40741%;
-}
-.third:nth-child(3n) {
-  margin-right: 0;
-}
-.third:nth-child(3n + 1) {
-  clear: left;
-}
+  width: 32.40741%; }
+  .third:nth-child(3n) {
+    margin-right: 0; }
+  .third:nth-child(3n + 1) {
+    clear: left; }
 
 /* ------------------------------------------------------------
    Button Classes
@@ -93,12 +79,10 @@
   font-size: 18px;
   font-size: 1.8rem;
   padding: 6px 10px;
-  padding: 0.6rem 1rem;
-}
-.btn-sm:hover {
-  background: #88160c;
-  color: white;
-}
+  padding: 0.6rem 1rem; }
+  .btn-sm:hover {
+    background: #88160c;
+    color: white; }
 
 .btn-md {
   background: #e62514;
@@ -122,12 +106,10 @@
   font-size: 24px;
   font-size: 2.4rem;
   padding: 12px 20px;
-  padding: 1.2rem 2rem;
-}
-.btn-md:hover {
-  background: #88160c;
-  color: white;
-}
+  padding: 1.2rem 2rem; }
+  .btn-md:hover {
+    background: #88160c;
+    color: white; }
 
 .btn-lg {
   background: #e62514;
@@ -151,12 +133,10 @@
   font-size: 32px;
   font-size: 3.2rem;
   padding: 24px 40px;
-  padding: 2.4rem 4rem;
-}
-.btn-lg:hover {
-  background: #88160c;
-  color: white;
-}
+  padding: 2.4rem 4rem; }
+  .btn-lg:hover {
+    background: #88160c;
+    color: white; }
 
 /* ------------------------------------------------------------
    Gradient Classes
@@ -167,38 +147,29 @@
 .one {
   background: url("images/img_one.png") no-repeat;
   background-size: 36px 36px;
-  padding-left: 80px;
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .one {
-    background: url("images/img_one@2x.png") no-repeat;
-    background-size: 36px 36px;
-  }
-}
+  padding-left: 80px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .one {
+      background: url("images/img_one@2x.png") no-repeat;
+      background-size: 36px 36px; } }
 
 .two {
   background: url("images/img_two.png") no-repeat;
   background-size: 36px 36px;
-  padding-left: 80px;
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .two {
-    background: url("images/img_two@2x.png") no-repeat;
-    background-size: 36px 36px;
-  }
-}
+  padding-left: 80px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .two {
+      background: url("images/img_two@2x.png") no-repeat;
+      background-size: 36px 36px; } }
 
 .three {
   background: url("images/img_three.png") no-repeat;
   background-size: 36px 36px;
-  padding-left: 80px;
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .three {
-    background: url("images/img_three@2x.png") no-repeat;
-    background-size: 36px 36px;
-  }
-}
+  padding-left: 80px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .three {
+      background: url("images/img_three@2x.png") no-repeat;
+      background-size: 36px 36px; } }
 
 /* ------------------------------------------------------------
    Sidebar - Defaults
@@ -207,49 +178,43 @@
   background: #dcdcda;
   overflow: hidden;
   padding: 16px 16px;
-  padding: 1.6rem 1.6rem;
-}
-.sidebar .widget input[type=submit],
-.sidebar .widget button[type=submit] {
-  background: #e62514;
-  border: none;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  -webkit-box-shadow: 0px -3px #88160c inset;
-  -moz-box-shadow: 0px -3px #88160c inset;
-  box-shadow: 0px -3px #88160c inset;
-  color: white;
-  display: inline-block;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  -moz-transition: all 0.1s ease-in-out;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-  font-size: 18px;
-  font-size: 1.8rem;
-  padding: 6px 10px;
-  padding: 0.6rem 1rem;
-}
-.sidebar .widget input[type=submit]:hover,
-.sidebar .widget button[type=submit]:hover {
-  background: #88160c;
-  color: white;
-}
-@media only screen and (max-width: 576px) {
-  .sidebar .widget {
-    padding: 8px 8px;
-    padding: 0.8rem 0.8rem;
-  }
-}
+  padding: 1.6rem 1.6rem; }
+  .sidebar .widget input[type=submit],
+  .sidebar .widget button[type=submit] {
+    background: #e62514;
+    border: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: 0px -3px #88160c inset;
+    -moz-box-shadow: 0px -3px #88160c inset;
+    box-shadow: 0px -3px #88160c inset;
+    color: white;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    -moz-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    font-size: 18px;
+    font-size: 1.8rem;
+    padding: 6px 10px;
+    padding: 0.6rem 1rem; }
+    .sidebar .widget input[type=submit]:hover,
+    .sidebar .widget button[type=submit]:hover {
+      background: #88160c;
+      color: white; }
+  @media only screen and (max-width: 576px) {
+    .sidebar .widget {
+      padding: 8px 8px;
+      padding: 0.8rem 0.8rem; } }
 
 .widgettitle,
 .widgettitle a {
-  color: #e62514;
-}
+  color: #e62514; }
 
 /* ------------------------------------------------------------
    Primary Sidebar
@@ -257,15 +222,12 @@
 .sidebar-primary {
   float: right;
   margin-left: 1.38889%;
-  width: 31.94444%;
-}
-@media only screen and (max-width: 960px) {
-  .sidebar-primary {
-    float: none;
-    margin-left: 0;
-    width: 100%;
-  }
-}
+  width: 31.94444%; }
+  @media only screen and (max-width: 960px) {
+    .sidebar-primary {
+      float: none;
+      margin-left: 0;
+      width: 100%; } }
 
 /* ------------------------------------------------------------
    Entry with Sidebar
@@ -292,16 +254,13 @@
   font-size: 24px;
   font-size: 2.4rem;
   padding: 12px 20px;
-  padding: 1.2rem 2rem;
-}
-.sidebar-entry .btn:hover {
-  background: #88160c;
-  color: white;
-}
+  padding: 1.2rem 2rem; }
+  .sidebar-entry .btn:hover {
+    background: #88160c;
+    color: white; }
 
 p.print-forms {
-  padding-top: 22px;
-}
+  padding-top: 22px; }
 
 /* ------------------------------------------------------------
    Widgets
@@ -311,100 +270,79 @@ p.print-forms {
 .widget .entry .entry-content,
 .widget .entry .more-link,
 .widget .entry .entry-footer {
-  padding: 0;
-}
+  padding: 0; }
 
 /* ------------------------------------------------------------
    Featured Property Widgets
    ------------------------------------------------------------ */
 .featured-property {
-  background: white;
-}
-.featured-property:last-child {
-  margin-bottom: 0;
-}
-.featured-property .property-info {
-  padding: 16px 16px;
-  padding: 1.6rem 1.6rem;
-}
+  background: white; }
+  .featured-property:last-child {
+    margin-bottom: 0; }
+  .featured-property .property-info {
+    padding: 16px 16px;
+    padding: 1.6rem 1.6rem; }
 
 /* ------------------------------------------------------------
    Subscribe Widget
    ------------------------------------------------------------ */
 .widget.subscribe {
-  background: #e4e5e3;
-}
+  background: #e4e5e3; }
 
 .subscribe
 form.email p {
-  overflow: hidden;
-}
-.subscribe
-form.email p label {
-  padding-top: 8px;
-  padding-top: 0.8rem;
-}
+  overflow: hidden; }
+  .subscribe
+  form.email p label {
+    padding-top: 8px;
+    padding-top: 0.8rem; }
 
 /* ------------------------------------------------------------
    Loan Comparison Info Widget
    ------------------------------------------------------------ */
 .loan-comp-item p {
-  text-align: center;
-}
-.loan-comp-item p.large {
-  color: #e62514;
-  font-size: 24px;
-  font-size: 2.4rem;
-  font-weight: 700;
-}
+  text-align: center; }
+  .loan-comp-item p.large {
+    color: #e62514;
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 700; }
 
 /* ------------------------------------------------------------
    Genesis Featured Widget Amplified
    ------------------------------------------------------------ */
 .widget.featuredpost img {
-  width: 100%;
-}
+  width: 100%; }
 
 /* ------------------------------------------------------------
    Featured Page Widgets
    ------------------------------------------------------------ */
 .widget.featuredpage {
   margin: 16px 16px;
-  margin: 1.6rem 1.6rem;
-}
-.widget.featuredpage .entry {
-  overflow: hidden;
-}
-.widget.featuredpage .entry-image {
-  float: left;
-  margin-right: 16px;
-  margin-right: 1.6rem;
-  width: 150px;
-}
-.widget.featuredpage .attachment-thumbnail {
-  border: 2px white solid;
-}
-.widget.featuredpage p {
-  margin-bottom: 0;
-}
-@media only screen and (max-width: 960px) {
+  margin: 1.6rem 1.6rem; }
+  .widget.featuredpage .entry {
+    overflow: hidden; }
   .widget.featuredpage .entry-image {
-    width: 100px;
-  }
-  .widget.featuredpage .entry-content {
-    display: none;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .widget.featuredpage .entry-image {
-    display: none;
-  }
-}
+    float: left;
+    margin-right: 16px;
+    margin-right: 1.6rem;
+    width: 150px; }
+  .widget.featuredpage .attachment-thumbnail {
+    border: 2px white solid; }
+  .widget.featuredpage p {
+    margin-bottom: 0; }
+  @media only screen and (max-width: 960px) {
+    .widget.featuredpage .entry-image {
+      width: 100px; }
+    .widget.featuredpage .entry-content {
+      display: none; } }
+  @media only screen and (max-width: 768px) {
+    .widget.featuredpage .entry-image {
+      display: none; } }
 
 .widget .entry {
   background: none;
-  padding: 0;
-}
+  padding: 0; }
 
 /* ------------------------------------------------------------
    Typography - Import Fonts
@@ -414,12 +352,10 @@ form.email p label {
    ------------------------------------------------------------ */
 html {
   font-family: 'Droid Serif', serif;
-  font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
 body {
-  font-size: 16px;
-}
+  font-size: 16px; }
 
 /* ------------------------------------------------------------
    Links
@@ -429,8 +365,7 @@ a:hover {
   color: #e62514;
   -moz-transition: all 0.1s ease-in-out;
   -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
+  transition: all 0.1s ease-in-out; }
 
 /* ------------------------------------------------------------
    Headings
@@ -452,50 +387,43 @@ h6 a {
   line-height: 1;
   margin: 16px 0px;
   margin: 1.6rem 0rem;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 h1,
 h1 a {
   color: #e62514;
   font-size: 36px;
   font-size: 3.6rem;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
 h2,
 h2 a {
   color: #4a4d54;
   font-size: 30px;
   font-size: 3rem;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
 h3,
 h3 a {
   color: #ffe500;
   font-size: 24px;
-  font-size: 2.4rem;
-}
+  font-size: 2.4rem; }
 
 h4,
 h4 a {
   color: #d0d3d4;
   font-size: 20px;
-  font-size: 2rem;
-}
+  font-size: 2rem; }
 
 h5,
 h5 a {
   font-size: 18px;
-  font-size: 1.8rem;
-}
+  font-size: 1.8rem; }
 
 h6,
 h6 a {
   font-size: 16px;
-  font-size: 1.6rem;
-}
+  font-size: 1.6rem; }
 
 /* ------------------------------------------------------------
    Content
@@ -511,33 +439,27 @@ h6 a {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='#ffffff',GradientType=1 );
   color: white;
   padding: 24px 24px;
-  padding: 2.4rem 2.4rem;
-}
+  padding: 2.4rem 2.4rem; }
 
 .entry-title,
 .entry-title a {
-  color: #e62514;
-}
+  color: #e62514; }
 
 .entry-subtitle {
   color: #4a4d54;
-  font-style: italic;
-}
+  font-style: italic; }
 
 /* ------------------------------------------------------------
    Paragraph
    ------------------------------------------------------------ */
 p {
-  margin: 0;
-}
+  margin: 0; }
 
 .wp-editor p {
-  margin-bottom: 16px;
-}
+  margin-bottom: 16px; }
 
 ul {
-  margin: 0;
-}
+  margin: 0; }
 
 /* ------------------------------------------------------------
    Forms
@@ -546,12 +468,10 @@ input[type=text],
 input[type=email],
 input[type=url] {
   padding: 8px 16px;
-  padding: 0.8rem 1.6rem;
-}
+  padding: 0.8rem 1.6rem; }
 
 textarea {
-  clear: both;
-}
+  clear: both; }
 
 input[type=submit],
 button[type=submit] {
@@ -576,10 +496,8 @@ button[type=submit] {
   font-size: 24px;
   font-size: 2.4rem;
   padding: 12px 20px;
-  padding: 1.2rem 2rem;
-}
-input[type=submit]:hover,
-button[type=submit]:hover {
-  background: #88160c;
-  color: white;
-}
+  padding: 1.2rem 2rem; }
+  input[type=submit]:hover,
+  button[type=submit]:hover {
+    background: #88160c;
+    color: white; }
