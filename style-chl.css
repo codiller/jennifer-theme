@@ -5,8 +5,8 @@
  * Author: Top Left Creative
  * Author URI: http://topleftcreative.com
  * Template: genesis
- * Version: 1.7.3.3
- * Updated: March 24, 2014
+ * Version: 1.7.3.4
+ * Updated: April 8, 2014
  *
  */
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
@@ -375,8 +375,8 @@ table {
 .half {
   float: left;
   margin-bottom: 24px;
-  margin-right: 2.08333%;
-  width: 48.95833%; }
+  margin-right: 2.08333333%;
+  width: 48.95833333%; }
   .half:nth-child(2n) {
     margin-right: 0; }
   .half:nth-child(2n + 1) {
@@ -390,8 +390,8 @@ table {
 .third {
   float: left;
   margin-bottom: 24px;
-  margin-right: 2.08333%;
-  width: 31.94444%; }
+  margin-right: 2.08333333%;
+  width: 31.94444444%; }
   .third:nth-child(3n) {
     margin-right: 0; }
   .third:nth-child(3n + 1) {
@@ -1145,7 +1145,7 @@ img {
    ------------------------------------------------------------ */
 .sidebar-primary {
   float: right;
-  margin-left: 2.08333%;
+  margin-left: 2.08333333%;
   width: 31.25%; }
   @media only screen and (max-width: 960px) {
     .sidebar-primary {
@@ -1426,8 +1426,8 @@ form.email p {
 .home-loop .entry {
   float: left;
   margin-bottom: 24px;
-  margin-right: 2.08333%;
-  width: 31.94444%; }
+  margin-right: 2.08333333%;
+  width: 31.94444444%; }
   .home-loop .entry:nth-child(3n) {
     margin-right: 0; }
   .home-loop .entry:nth-child(3n + 1) {
@@ -1436,8 +1436,8 @@ form.email p {
     .home-loop .entry {
       float: left;
       margin-bottom: 24px;
-      margin-right: 2.08333%;
-      width: 48.95833%; }
+      margin-right: 2.08333333%;
+      width: 48.95833333%; }
       .home-loop .entry:nth-child(2n) {
         margin-right: 0; }
       .home-loop .entry:nth-child(2n + 1) {
@@ -1448,7 +1448,7 @@ form.email p {
     .home-loop .entry {
       float: left;
       margin-bottom: 24px;
-      margin-right: 2.08333%;
+      margin-right: 2.08333333%;
       width: 100%; }
       .home-loop .entry:nth-child(1n) {
         margin-right: 0; }
@@ -1468,8 +1468,8 @@ form.email p {
 .directory-listings .employees {
   float: left;
   margin-bottom: 24px;
-  margin-right: 2.08333%;
-  width: 31.94444%; }
+  margin-right: 2.08333333%;
+  width: 31.94444444%; }
   .directory-listings .employees:nth-child(3n) {
     margin-right: 0; }
   .directory-listings .employees:nth-child(3n + 1) {
@@ -1501,10 +1501,10 @@ form.email p {
     .directory-listings .employees {
       float: left;
       margin-bottom: 24px;
-      margin-right: 2.08333%;
-      width: 48.95833%; }
+      margin-right: 2.08333333%;
+      width: 48.95833333%; }
       .directory-listings .employees:nth-child(3n) {
-        margin-right: 2.08333%; }
+        margin-right: 2.08333333%; }
       .directory-listings .employees:nth-child(3n + 1) {
         clear: none; }
       .directory-listings .employees:nth-child(2n) {
@@ -1515,10 +1515,10 @@ form.email p {
     .directory-listings .employees {
       float: left;
       margin-bottom: 24px;
-      margin-right: 2.08333%;
+      margin-right: 2.08333333%;
       width: 100%; }
       .directory-listings .employees:nth-child(2n) {
-        margin-right: 2.08333%; }
+        margin-right: 2.08333333%; }
       .directory-listings .employees:nth-child(2n + 1) {
         clear: none; }
       .directory-listings .employees:nth-child(1n) {
@@ -1539,7 +1539,7 @@ form.email p {
 
 .single-employees .sidebar-primary {
   float: right;
-  margin-left: 2.08333%;
+  margin-left: 2.08333333%;
   width: 31.25%; }
   @media only screen and (max-width: 576px) {
     .single-employees .sidebar-primary {
@@ -1586,8 +1586,8 @@ form.email p {
 .loan-products-overview .loan-products {
   float: left;
   margin-bottom: 32px;
-  margin-right: 2.77778%;
-  width: 48.61111%;
+  margin-right: 2.77777778%;
+  width: 48.61111111%;
   margin-bottom: 24px;
   margin-bottom: 2.4rem; }
   .loan-products-overview .loan-products:nth-child(2n) {

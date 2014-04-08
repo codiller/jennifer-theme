@@ -5,8 +5,8 @@
  * Author: Top Left Creative
  * Author URI: http://topleftcreative.com
  * Template: genesis
- * Version: 1.7.3.3
- * Updated: March 24, 2014
+ * Version: 1.7.3.4
+ * Updated: April 8, 2014
  *
  */
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
@@ -418,8 +418,8 @@ table {
 .half {
   float: left;
   margin-bottom: 16px;
-  margin-right: 1.38889%;
-  width: 49.30556%;
+  margin-right: 1.38888889%;
+  width: 49.30555556%;
 }
 .half:nth-child(2n) {
   margin-right: 0;
@@ -438,8 +438,8 @@ table {
 .third {
   float: left;
   margin-bottom: 16px;
-  margin-right: 1.38889%;
-  width: 32.40741%;
+  margin-right: 1.38888889%;
+  width: 32.40740741%;
 }
 .third:nth-child(3n) {
   margin-right: 0;
@@ -1350,8 +1350,8 @@ img {
    ------------------------------------------------------------ */
 .sidebar-primary {
   float: right;
-  margin-left: 1.38889%;
-  width: 31.94444%;
+  margin-left: 1.38888889%;
+  width: 31.94444444%;
 }
 @media only screen and (max-width: 960px) {
   .sidebar-primary {
@@ -1685,8 +1685,8 @@ form.email p label {
 .home-loop .entry {
   float: left;
   margin-bottom: 24px;
-  margin-right: 2.08333%;
-  width: 31.94444%;
+  margin-right: 2.08333333%;
+  width: 31.94444444%;
 }
 .home-loop .entry:nth-child(3n) {
   margin-right: 0;
@@ -1698,8 +1698,8 @@ form.email p label {
   .home-loop .entry {
     float: left;
     margin-bottom: 16px;
-    margin-right: 1.38889%;
-    width: 49.30556%;
+    margin-right: 1.38888889%;
+    width: 49.30555556%;
   }
   .home-loop .entry:nth-child(2n) {
     margin-right: 0;
@@ -1715,7 +1715,7 @@ form.email p label {
   .home-loop .entry {
     float: left;
     margin-bottom: 16px;
-    margin-right: 1.38889%;
+    margin-right: 1.38888889%;
     width: 100%;
   }
   .home-loop .entry:nth-child(1n) {
@@ -1741,8 +1741,8 @@ form.email p label {
 .directory-listings .employees {
   float: left;
   margin-bottom: 16px;
-  margin-right: 1.38889%;
-  width: 32.40741%;
+  margin-right: 1.38888889%;
+  width: 32.40740741%;
 }
 .directory-listings .employees:nth-child(3n) {
   margin-right: 0;
@@ -1785,11 +1785,11 @@ form.email p label {
   .directory-listings .employees {
     float: left;
     margin-bottom: 16px;
-    margin-right: 1.38889%;
-    width: 49.30556%;
+    margin-right: 1.38888889%;
+    width: 49.30555556%;
   }
   .directory-listings .employees:nth-child(3n) {
-    margin-right: 1.38889%;
+    margin-right: 1.38888889%;
   }
   .directory-listings .employees:nth-child(3n + 1) {
     clear: none;
@@ -1805,11 +1805,11 @@ form.email p label {
   .directory-listings .employees {
     float: left;
     margin-bottom: 16px;
-    margin-right: 1.38889%;
+    margin-right: 1.38888889%;
     width: 100%;
   }
   .directory-listings .employees:nth-child(2n) {
-    margin-right: 1.38889%;
+    margin-right: 1.38888889%;
   }
   .directory-listings .employees:nth-child(2n + 1) {
     clear: none;
@@ -1838,8 +1838,8 @@ form.email p label {
 
 .single-employees .sidebar-primary {
   float: right;
-  margin-left: 1.38889%;
-  width: 31.94444%;
+  margin-left: 1.38888889%;
+  width: 31.94444444%;
 }
 @media only screen and (max-width: 576px) {
   .single-employees .sidebar-primary {
@@ -1898,8 +1898,8 @@ form.email p label {
 .loan-products-overview .loan-products {
   float: left;
   margin-bottom: 32px;
-  margin-right: 2.77778%;
-  width: 48.61111%;
+  margin-right: 2.77777778%;
+  width: 48.61111111%;
   margin-bottom: 16px;
   margin-bottom: 1.6rem;
 }

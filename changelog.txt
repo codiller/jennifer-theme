@@ -1,3 +1,7 @@
+/** Version 1.7.3.4 **/
+
+* Added Nick Lovato to Company Selector.
+
 /** Version 1.7.3.3 **/
 
 * Changed Equal Housing Lender logo to Equal Housing Opportunity Logo.

@@ -532,7 +532,7 @@ body {
    ------------------------------------------------------------ */
 a,
 a:hover {
-  color: #002554;
+  color: #61415c;
   -moz-transition: all 0.1s ease-in-out;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out; }
@@ -563,14 +563,14 @@ h6 a {
 
 h1,
 h1 a {
-  color: #002554;
+  color: #61415c;
   font-size: 36px;
   font-size: 3.6rem;
   text-transform: uppercase; }
 
 h2,
 h2 a {
-  color: #4a4d54;
+  color: #939193;
   font-size: 30px;
   font-size: 3rem;
   text-transform: uppercase; }
@@ -578,13 +578,13 @@ h2 a {
 h3, .home-testimonials .rsTmb,
 h3 a,
 .home-testimonials .rsTmb a {
-  color: #7c2529;
+  color: #939193;
   font-size: 24px;
   font-size: 2.4rem; }
 
 h4,
 h4 a {
-  color: #a3becf;
+  color: #205988;
   font-size: 20px;
   font-size: 2rem; }
 
@@ -602,13 +602,13 @@ h6 a {
    Content
    ------------------------------------------------------------ */
 .section-title {
-  background: #002554;
-  background: -moz-linear-gradient(left, #002554 0%, white 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #002554), color-stop(100%, white));
-  background: -webkit-linear-gradient(left, #002554 0%, white 100%);
-  background: -o-linear-gradient(left, #002554 0%, white 100%);
-  background: -ms-linear-gradient(left, #002554 0%, white 100%);
-  background: linear-gradient(to right, #002554 0%, white 100%);
+  background: #61415c;
+  background: -moz-linear-gradient(left, #61415c 0%, white 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #61415c), color-stop(100%, white));
+  background: -webkit-linear-gradient(left, #61415c 0%, white 100%);
+  background: -o-linear-gradient(left, #61415c 0%, white 100%);
+  background: -ms-linear-gradient(left, #61415c 0%, white 100%);
+  background: linear-gradient(to right, #61415c 0%, white 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='#ffffff',GradientType=1 );
   color: white;
   padding: 24px 24px;
@@ -616,10 +616,10 @@ h6 a {
 
 .entry-title,
 .entry-title a {
-  color: #002554; }
+  color: #61415c; }
 
 .entry-subtitle {
-  color: #4a4d54;
+  color: #939193;
   font-style: italic; }
 
 /* ------------------------------------------------------------
@@ -750,7 +750,7 @@ button[type=submit] {
     width: 50%; }
     .pre-header .pre-header-right .call,
     .pre-header .pre-header-right .locations {
-      color: #002554;
+      color: #61415c;
       display: inline-block;
       font-size: 24px;
       font-size: 2.4rem;
@@ -825,34 +825,34 @@ button[type=submit] {
 
 .title-area {
   float: left;
-  width: 332px; }
+  width: 334px; }
   .title-area .site-title {
-    margin: 16px 16px;
-    margin: 1.6rem 1.6rem;
+    margin: 8px 8px;
+    margin: 0.8rem 0.8rem;
     text-indent: -9999px; }
   .title-area .site-title a {
-    background: url("images/logo-prmi.png") no-repeat;
-    background-size: 300px auto;
+    background: url("images/logo_chl_nl.png") no-repeat;
+    background-size: 318px auto;
     display: block;
-    height: 75px;
+    height: 125px;
     margin: 0; }
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       .title-area .site-title a {
-        background: url("images/logo-prmi@2x.png") no-repeat;
-        background-size: 300px auto; } }
+        background: url("images/logo_chl_nl@2x.png") no-repeat;
+        background-size: 318px auto; } }
   .title-area .site-description {
     display: none;
     text-indent: -9999px; }
   @media only screen and (max-width: 576px) {
     .title-area {
-      width: 233px; }
+      width: 242.5px; }
       .title-area .site-title {
         margin: 3px 3px;
         margin: 0.3rem 0.3rem; }
       .title-area .site-title a {
-        background-size: 225px auto;
-        height: 56.25px;
-        width: 225px; } }
+        background-size: 238.5px auto;
+        height: 93.75px;
+        width: 238.5px; } }
 
 .header-widget-area .widget {
   float: right; }
@@ -866,8 +866,8 @@ button[type=submit] {
   @media only screen and (max-width: 960px) {
     .menu-toggle {
       display: block;
-      padding: 26.5px 12px;
-      padding: 2.65rem 1.2rem; } }
+      padding: 43.5px 12px;
+      padding: 4.35rem 1.2rem; } }
   @media only screen and (max-width: 576px) {
     .menu-toggle {
       padding: 0px 0px;
@@ -1005,25 +1005,25 @@ img {
     text-transform: uppercase; }
   .genesis-nav-menu a {
     border-left: white 1px solid;
-    color: #002554;
+    color: #61415c;
     display: block;
     font-family: 'Open Sans', sans-serif;
-    padding: 42.5px 12px;
-    padding: 4.25rem 1.2rem;
+    padding: 59.5px 12px;
+    padding: 5.95rem 1.2rem;
     position: relative;
     text-decoration: none; }
   .genesis-nav-menu a:hover,
   .genesis-nav-menu .current-menu-item > a,
   .genesis-nav-menu .current-menu-ancestor > a {
-    background: #002554;
+    background: #61415c;
     color: white; }
   @media only screen and (max-width: 1152px) {
     .genesis-nav-menu a {
       border: 0;
       font-size: 12px;
       font-size: 1.2rem;
-      padding: 45.25px 12px;
-      padding: 4.525rem 1.2rem; } }
+      padding: 62.25px 12px;
+      padding: 6.225rem 1.2rem; } }
   @media only screen and (max-width: 960px) {
     .genesis-nav-menu {
       display: none; }
@@ -1138,7 +1138,7 @@ img {
 
 .widgettitle,
 .widgettitle a {
-  color: #002554; }
+  color: #61415c; }
 
 /* ------------------------------------------------------------
    Primary Sidebar
@@ -1227,7 +1227,7 @@ form.email p {
 .loan-comp-item p {
   text-align: center; }
   .loan-comp-item p.large {
-    color: #002554;
+    color: #61415c;
     font-size: 24px;
     font-size: 2.4rem;
     font-weight: 700; }
@@ -1273,7 +1273,7 @@ form.email p {
    ------------------------------------------------------------ */
 /* Home Feature Widget Area */
 .home-feature {
-  margin-top: -159px;
+  margin-top: -193px;
   z-index: 1; }
   .home-feature h3, .home-feature .home-testimonials .rsTmb, .home-testimonials .home-feature .rsTmb {
     background: rgba(255, 255, 255, 0.75);
@@ -1548,7 +1548,7 @@ form.email p {
       width: 100%; } }
 
 .single-employees .menu-directory a {
-  background: #002554;
+  background: #61415c;
   color: white; }
 
 .single-employees .employee-actions {
@@ -1599,7 +1599,7 @@ form.email p {
    Single Template - Loan Products
    ------------------------------------------------------------ */
 .single-loan-products .menu-item-307 a {
-  background: #002554;
+  background: #61415c;
   color: white; }
 .single-loan-products .sidebar .btn {
   padding: 8px 12px;
@@ -1699,7 +1699,7 @@ div.csSBWidget span {
   color: white; }
   .resp-tab-active h2,
   .resp-tab-content-active h2 {
-    color: #002554; }
+    color: #61415c; }
 
 .resp-tab-content {
   padding: 32px 32px;

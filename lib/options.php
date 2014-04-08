@@ -179,6 +179,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 			<select name="<?php echo $this->get_field_name( 'company_selector' ); ?>" id="<?php echo $this->get_field_id( 'company_selector' ); ?>">
 				<option value="tlc"<?php selected( $current_company, 'tlc' ); ?>>*Top Left Creative*</option>
 				<option value="chl"<?php selected( $current_company, 'chl' ); ?>>Citywide Home Loans</option>
+				<option value="chl-nl"<?php selected( $current_company, 'chl-nl' ); ?>>Nick Lovato @ Citywide Home Loans</option>
 				<option value="nwmg"<?php selected( $current_company, 'nwmg' ); ?>>Northwest Mortgage Group</option>
 				<option value="prmi"<?php selected( $current_company, 'prmi' ); ?>>Primary Residential Mortgage, Inc.</option>
 				<option value="rhm"<?php selected( $current_company, 'rhm' ); ?>>Red Hills Mortgage</option>
