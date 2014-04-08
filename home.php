@@ -87,33 +87,38 @@ remove_action( 'genesis_loop', 'genesis_do_loop' );
 add_action( 'genesis_before_loop', 'tlc_home_loop' );
 function tlc_home_loop() {
 
-	remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
-	remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+	// Only show this section if the checkbox to include the blogroll on the homepage is checked.
+	if( genesis_get_option( 'include_homepage_blog', 'tlc_options' ) ) {
 
-	// Adds section
-	echo '<section class="home-loop">';
-	
-	// Adds section title
-	echo '<h1 class="section-title">From The Blog</h1>';
+		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+		remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 
-	// Adds article container (needed for :nth-child)
-	echo '<div class="entries">';
-	
-	// If altering the main wp_query, use this so WordPress knows which page it's on. Read here: https://codex.wordpress.org/Pagination
-	$paged = get_query_var( paged );
+		// Adds section
+		echo '<section class="home-loop">';
+		
+		// Adds section title
+		echo '<h1 class="section-title">From The Blog</h1>';
 
-	// Loop arguments
-	$args=array(
-		'posts_per_page' => 3,
-		'paged' => $paged
-	);
-	genesis_custom_loop( $args );
+		// Adds article container (needed for :nth-child)
+		echo '<div class="entries">';
+		
+		// If altering the main wp_query, use this so WordPress knows which page it's on. Read here: https://codex.wordpress.org/Pagination
+		$paged = get_query_var( paged );
 
-	// Closes article container
-	echo '</div><!-- end .entries-->';
+		// Loop arguments
+		$args=array(
+			'posts_per_page' => 3,
+			'paged' => $paged
+		);
+		genesis_custom_loop( $args );
 
-	// Closes section
-	echo '</section><!-- end .home-loop-->';
+		// Closes article container
+		echo '</div><!-- end .entries-->';
+
+		// Closes section
+		echo '</section><!-- end .home-loop-->';
+
+	}
 
 }
 
