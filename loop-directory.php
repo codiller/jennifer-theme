@@ -16,7 +16,7 @@
 	if( has_post_thumbnail() ) { ?>
 
 		<div class="employee-photo">
-			<a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail( 'employee' ); ?></a>
+			<a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail( 'one-third-1x1' ); ?></a>
 		</div>
 	
 	<?php }

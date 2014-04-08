@@ -2,6 +2,7 @@
 
 * Added Nick Lovato to Company Selector.
 * Added homepage blogroll to TLC Options page.
+* Changed loop-directory.php featured image size to one-third-1x1
 
 /** Version 1.7.3.3 **/
 
