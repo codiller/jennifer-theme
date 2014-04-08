@@ -1,6 +1,7 @@
 /** Version 1.7.3.4 **/
 
 * Added Nick Lovato to Company Selector.
+* Added homepage blogroll to TLC Options page.
 
 /** Version 1.7.3.3 **/
 

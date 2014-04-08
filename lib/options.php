@@ -59,6 +59,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		
 		// Set the default values
 		$default_settings = array(
+			'include_homepage_blog' => true,
 		);
 		
 		// Create the Admin Page
@@ -88,6 +89,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 				'disclaimer',
 				'company_selector',
 				'website_type',
+				'include_homepage_blog',
 				'facebook_url',
 				'twitter_url',
 				'linkedin_url',
@@ -196,7 +198,11 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 			</select>
 		</p>
 
-	<?php }
+		<p>Homepage Blogroll:<br />
+		<?php echo '<input type="checkbox" name="' . $this->get_field_name( 'include_homepage_blog' ) . '" id="' . $this->get_field_id( 'include_homepage_blog' ) . '" value="1"' . checked( 1, $this->get_field_value( 'include_homepage_blog' ), false ) . '" /><label for' . $this->get_field_name( 'include_homepage_blog' ) . '>Check to include the blogroll on the homepage</label>';
+		echo '</p>';
+
+	}
 
 	function social_media_accounts() {
 		
