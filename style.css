@@ -5,8 +5,8 @@
  * Author: Top Left Creative
  * Author URI: http://topleftcreative.com
  * Template: genesis
- * Version: 1.7.3.4
- * Updated: April 8, 2014
+ * Version: 1.7.3.5
+ * Updated: April 14, 2014
  *
  */
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
@@ -841,6 +841,10 @@ button[type=submit]:hover {
   padding: 8px 8px;
   padding: 0.8rem 0.8rem;
   width: 50%;
+}
+.pre-header .pre-header-left h2 {
+  color: #4a4d55;
+  margin: 0;
 }
 .pre-header .pre-header-right {
   float: right;

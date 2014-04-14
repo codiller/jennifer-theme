@@ -46,6 +46,10 @@ register_nav_menus( array(
  *
  */
 genesis_register_sidebar( array(
+	'id' => 'pre-header-left',
+	'name' => 'Pre-Header Left',
+) );
+genesis_register_sidebar( array(
 	'id' => 'home-feature',
 	'name' => 'Home Feature',
 ) );
@@ -241,7 +245,9 @@ function tlc_pre_header() { ?>
 	<section class="pre-header">
 		<div class="wrap">
 			
-			<div class="pre-header-left"></div>
+			<div class="pre-header-left">
+				<?php dynamic_sidebar( 'pre-header-left' ); ?>
+			</div>
 
 			<div class="pre-header-right">
 
