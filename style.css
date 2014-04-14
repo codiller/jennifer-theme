@@ -891,6 +891,7 @@ button[type=submit]:hover {
 @media only screen and (max-width: 960px) {
   .pre-header .pre-header-left {
     float: none;
+    text-align: center;
     width: 100%;
   }
   .pre-header .pre-header-right {
