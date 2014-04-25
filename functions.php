@@ -208,11 +208,15 @@ function jtd_gform_init_scripts( $form ) {
  */
 add_filter( 'new_royalslider_skins', 'new_royalslider_add_custom_skin', 10, 2 );
 function new_royalslider_add_custom_skin( $skins ) {
-      $skins['rsNaked'] = array(
-           'label' => 'Custom Naked Skin',
-           'path' => get_stylesheet_directory_uri() . '/lib/royalslider/skins/rs-naked.css'  // get_stylesheet_directory_uri returns path to your theme folder
-      );
-      return $skins;
+	  $skins['rsNaked'] = array(
+		   'label' => 'Custom Naked Skin',
+		   'path' => get_stylesheet_directory_uri() . '/lib/royalslider/skins/naked/rs-naked.css'  // get_stylesheet_directory_uri returns path to your theme folder
+	  );
+	  $skins['rsDefaultInvMod'] = array(
+		   'label' => 'Light Modified',
+		   'path' => get_stylesheet_directory_uri() . '/lib/royalslider/skins/default-inverted-modified/rs-default-inverted.css'  // get_stylesheet_directory_uri returns path to your theme folder
+	  );
+	  return $skins;
 }
 
 /* ------------------------------------------------------------
