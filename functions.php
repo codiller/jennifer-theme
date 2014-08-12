@@ -98,7 +98,7 @@ add_editor_style( 'editor-style.css' );
  * Add the 'excerpt' meta box on 'pages' post type
  *
  */
-add_post_type_support('page', 'excerpt');
+add_post_type_support( 'page', 'excerpt' );
 
 /*
  *
@@ -212,7 +212,7 @@ function new_royalslider_add_custom_skin( $skins ) {
 		   'label' => 'Custom Naked Skin',
 		   'path' => get_stylesheet_directory_uri() . '/lib/royalslider/skins/naked/rs-naked.css'  // get_stylesheet_directory_uri returns path to your theme folder
 	  );
-	  $skins['rsDefaultInvMod'] = array(
+	  $skins['rsDefaultInvertedModified'] = array(
 		   'label' => 'Light Modified',
 		   'path' => get_stylesheet_directory_uri() . '/lib/royalslider/skins/default-inverted-modified/rs-default-inverted.css'  // get_stylesheet_directory_uri returns path to your theme folder
 	  );

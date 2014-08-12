@@ -1,3 +1,8 @@
+/** Version 1.7.3.6 **/
+
+- Centered Pre-Header-Left Text on Large
+- Edited RoyalSlider Settings to Add Inverted Modified
+
 /** Version 1.7.3.5 **/
 
 * Added Pre-Header Widget Area
