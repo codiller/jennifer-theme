@@ -75,6 +75,13 @@ require_once( get_stylesheet_directory() . '/lib/cpt/tlc_cpt_testimonials.php' )
 
 /*
  *
+ * Add custom meta boxes
+ *
+ */
+require_once( get_stylesheet_directory() . '/lib/cmb/tlc_cmb_conversions.php' );
+
+/*
+ *
  * Initialize the Metaboxes Class
  *
  */
