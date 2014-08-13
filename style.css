@@ -2105,3 +2105,199 @@ div.csSBWidget span {
 .ui-datepicker {
   margin: 0 !important;
 }
+
+/* ------------------------------------------------------------
+   Landing Page
+   ------------------------------------------------------------ */
+.landing-page {
+  /* ---------- Defaults ---------- */
+  /* ---------- Intro ---------- */
+  /* ---------- Benefits ---------- */
+  /* ---------- Testimonials ---------- */
+  /* ---------- Callout Two ---------- */
+}
+.landing-page h1 {
+  font-size: 48px;
+  font-size: 4.8rem;
+}
+@media only screen and (max-width: 576px) {
+  .landing-page h1 {
+    font-size: 36px;
+    font-size: 3.6rem;
+  }
+}
+.landing-page h2 {
+  font-size: 36px;
+  font-size: 3.6rem;
+}
+@media only screen and (max-width: 576px) {
+  .landing-page h2 {
+    font-size: 30px;
+    font-size: 3rem;
+  }
+}
+.landing-page p,
+.landing-page ul {
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+}
+.landing-page p:last-child,
+.landing-page ul:last-child {
+  margin-bottom: 0;
+}
+.landing-page .header-widget-area .widget {
+  margin: 16px 16px;
+  margin: 1.6rem 1.6rem;
+}
+.landing-page .site-inner {
+  padding: 0;
+}
+.landing-page .site-inner .wrap {
+  width: 100%;
+}
+.landing-page .site-inner .entry {
+  overflow: hidden;
+  padding: 0;
+}
+.landing-page .intro {
+  background: url("images/top-bg.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 16px 0px;
+  padding: 1.6rem 0rem;
+}
+.landing-page .intro h1 {
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+}
+.landing-page .intro h2 {
+  color: #e62514;
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+}
+.landing-page .intro p,
+.landing-page .intro ul,
+.landing-page .intro li {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+.landing-page .intro .bg-lighten {
+  background: white;
+  overflow: hidden;
+  padding: 16px 16px;
+  padding: 1.6rem 1.6rem;
+}
+.landing-page .intro .cta {
+  background: #e62514;
+  padding: 16px 16px;
+  padding: 1.6rem 1.6rem;
+}
+.landing-page .intro .cta h1,
+.landing-page .intro .cta h2,
+.landing-page .intro .cta p,
+.landing-page .intro .cta label {
+  color: white;
+}
+.landing-page .intro .cta p {
+  font-size: 16px;
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+}
+.landing-page .intro .cta .gform_wrapper .gfield_label {
+  float: left;
+  padding: 11px 0px;
+  padding: 1.1rem 0rem;
+  width: 30%;
+}
+.landing-page .intro .cta .gform_wrapper .ginput_container {
+  float: left;
+  width: 70%;
+}
+.landing-page .intro .cta .gform_wrapper input[type=text],
+.landing-page .intro .cta .gform_wrapper input[type=email],
+.landing-page .intro .cta .gform_wrapper input[type=tel] {
+  border: 1px solid #e62514;
+  padding: 10px;
+}
+.landing-page .intro .cta .gform_wrapper input[type=submit] {
+  width: 100%;
+}
+.landing-page .intro .cta .gform_wrapper .gform_confirmation_message {
+  color: #4a4d55;
+}
+@media only screen and (max-width: 576px) {
+  .landing-page .intro p,
+  .landing-page .intro ul,
+  .landing-page .intro li {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+}
+.landing-page .benefits {
+  padding: 32px 0px;
+  padding: 3.2rem 0rem;
+}
+.landing-page .benefits p {
+  font-size: 20px;
+  font-size: 2rem;
+}
+.landing-page .benefits li {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+.landing-page .benefits .benefit-image {
+  float: left;
+  margin-right: 16px;
+  margin-right: 1.6rem;
+  margin-top: 16px;
+  margin-top: 1.6rem;
+  width: 176px;
+}
+@media only screen and (max-width: 960px) {
+  .landing-page .benefits {
+    text-align: center;
+  }
+  .landing-page .benefits h2,
+  .landing-page .benefits p {
+    padding: 0;
+  }
+  .landing-page .benefits .benefit-image {
+    float: none;
+    margin-right: 0px;
+    margin-right: 0rem;
+  }
+}
+.landing-page .testimonials {
+  background: #e62514;
+  color: white;
+  padding: 32px 0px;
+  padding: 3.2rem 0rem;
+}
+.landing-page .testimonials h1 {
+  color: white;
+  margin-bottom: 32px;
+  margin-bottom: 3.2rem;
+}
+.landing-page .testimonials h3, .landing-page .testimonials .home-testimonials .rsTmb, .home-testimonials .landing-page .testimonials .rsTmb {
+  color: white;
+}
+.landing-page .testimonials img {
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+}
+.landing-page .testimonials p.quote {
+  background: url("images/img_quote.png") no-repeat;
+  line-height: 1.5;
+  padding-left: 48px;
+  padding-left: 4.8rem;
+}
+.landing-page .callout-two {
+  background: white;
+  padding: 32px 0px;
+  padding: 3.2rem 0rem;
+  text-align: center;
+}
+.landing-page .callout-two h2 {
+  color: #e62514;
+}

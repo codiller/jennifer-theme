@@ -65,6 +65,10 @@ genesis_register_sidebar( array(
 	'id' => 'tab-three',
 	'name' => 'Home Tab Three',
 ) );
+genesis_register_sidebar( array(
+	'id' => 'landing-page-header-right',
+	'name' => 'Landing Page Header Right',
+) );
 
 /*
  *
