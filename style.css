@@ -2073,7 +2073,8 @@ div.csSBWidget span {
   padding: 0 !important;
 }
 
-.gform_wrapper .gform_footer input[type=submit] {
+.gform_wrapper .gform_footer input[type=submit],
+.gform_wrapper .gform_footer input[type=button] {
   background: #e62514;
   border: none;
   -webkit-border-radius: 0px;
@@ -2097,7 +2098,8 @@ div.csSBWidget span {
   padding: 6px 10px;
   padding: 0.6rem 1rem;
 }
-.gform_wrapper .gform_footer input[type=submit]:hover {
+.gform_wrapper .gform_footer input[type=submit]:hover,
+.gform_wrapper .gform_footer input[type=button]:hover {
   background: #88160c;
   color: white;
 }

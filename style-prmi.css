@@ -1730,7 +1730,8 @@ div.csSBWidget span {
   overflow: hidden !important;
   padding: 0 !important; }
 
-.gform_wrapper .gform_footer input[type=submit] {
+.gform_wrapper .gform_footer input[type=submit],
+.gform_wrapper .gform_footer input[type=button] {
   background: #ef730a;
   border: none;
   -webkit-border-radius: 0px;
@@ -1753,7 +1754,8 @@ div.csSBWidget span {
   font-size: 1.8rem;
   padding: 6px 10px;
   padding: 0.6rem 1rem; }
-  .gform_wrapper .gform_footer input[type=submit]:hover {
+  .gform_wrapper .gform_footer input[type=submit]:hover,
+  .gform_wrapper .gform_footer input[type=button]:hover {
     background: #8d4406;
     color: white; }
 
