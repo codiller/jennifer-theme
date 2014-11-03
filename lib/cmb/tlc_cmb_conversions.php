@@ -2,7 +2,7 @@
 
 /*
  *
- * Add conversions custom meta boxes
+ * Add Conversion Information Custom Meta Box
  *
  */
 add_filter( 'cmb_meta_boxes', 'tlc_cmb_metaboxes_conversions' );

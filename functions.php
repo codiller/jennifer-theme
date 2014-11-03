@@ -66,6 +66,10 @@ genesis_register_sidebar( array(
 	'name' => 'Home Tab Three',
 ) );
 genesis_register_sidebar( array(
+	'id' => 'blog-sidebar',
+	'name' => 'Blog Sidebar',
+) );
+genesis_register_sidebar( array(
 	'id' => 'landing-page-header-right',
 	'name' => 'Landing Page Header Right',
 ) );
@@ -83,6 +87,7 @@ require_once( get_stylesheet_directory() . '/lib/cpt/tlc_cpt_testimonials.php' )
  *
  */
 require_once( get_stylesheet_directory() . '/lib/cmb/tlc_cmb_conversions.php' );
+require_once( get_stylesheet_directory() . '/lib/cmb/tlc_cmb_disclosures.php' );
 
 /*
  *
@@ -380,6 +385,21 @@ function tlc_read_more() {
 add_action( 'gfwa_after_post_content', 'tlc_gwfa_read_more' );
 function tlc_gwfa_read_more() {
 	echo '<a href="' . get_permalink() . '" class="more-link">Learn More</a>';
+}
+
+/*
+ *
+ * Add disclosure information, if present
+ *
+ */
+add_action( 'genesis_entry_footer', 'tlc_disclosure_information' );
+function tlc_disclosure_information() {
+	if( get_post_meta( get_the_ID(), '_tlc_disclosure_information', true ) ) {
+		$disclosure_information = get_post_meta( get_the_ID(), '_tlc_disclosure_information', true ); ?>
+
+		<p class="disclosure">Disclosure(s): <?php echo $disclosure_information; ?></p>
+
+	<?php }
 }
 
 /*

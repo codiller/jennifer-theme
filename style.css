@@ -581,8 +581,8 @@ table {
 }
 
 .disclosure {
-  font-size: 10px;
-  font-size: 1rem;
+  font-size: 12px;
+  font-size: 1.2rem;
 }
 
 /* ------------------------------------------------------------
@@ -1312,6 +1312,11 @@ img {
   overflow: hidden;
   padding: 16px 16px;
   padding: 1.6rem 1.6rem;
+}
+.sidebar .widget p {
+  line-height: 1.5;
+  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
 }
 .sidebar .widget input[type=submit],
 .sidebar .widget button[type=submit] {
