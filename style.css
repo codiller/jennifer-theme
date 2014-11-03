@@ -580,6 +580,11 @@ table {
   }
 }
 
+.disclosure {
+  font-size: 10px;
+  font-size: 1rem;
+}
+
 /* ------------------------------------------------------------
    Typography - Import Fonts
    ------------------------------------------------------------ */
@@ -685,7 +690,7 @@ h6 a {
   background: -o-linear-gradient(left, #e62514 0%, white 100%);
   background: -ms-linear-gradient(left, #e62514 0%, white 100%);
   background: linear-gradient(to right, #e62514 0%, white 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='#ffffff',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='#ffffff',GradientType=1 );
   color: white;
   padding: 24px 24px;
   padding: 2.4rem 2.4rem;
