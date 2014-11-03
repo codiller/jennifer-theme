@@ -4,9 +4,7 @@
 /style-nwmg.scss
 /style-prmi.scss
 /style.scss
-
 /style-rhm.scss
-
 /config.codekit
-
 /.sass-cache/
+.DS_Store
