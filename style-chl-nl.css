@@ -981,6 +981,9 @@ button[type=submit] {
   .site-footer .creds p {
     margin-bottom: 24px;
     margin-bottom: 2.4rem; }
+    .site-footer .creds p .disclaimer {
+      font-size: 12px;
+      font-size: 1.2rem; }
   .site-footer .creds p:last-of-type {
     margin: 0; }
   .site-footer .gototop {
