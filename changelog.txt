@@ -1,3 +1,11 @@
+/** Version 1.8 **/
+
+- Added Conversions CMB & Page
+- Added Landing Page Template
+- Added Guild Mortgage Company
+- Added Disclosure CMB
+- Changed Disclaimer in TLC Options
+
 /** Version 1.7.3.6 **/
 
 - Centered Pre-Header-Left Text on Large
