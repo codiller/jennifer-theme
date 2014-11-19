@@ -1635,7 +1635,7 @@ form.email p {
   width: 50%; }
   .table-2 .table-item h4 {
     border-bottom: 2px #205988 solid;
-    min-height: 50px;
+    padding-bottom: 4px;
     text-align: center; }
 
 .table-5 .table-item {
