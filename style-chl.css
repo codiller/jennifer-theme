@@ -1623,6 +1623,23 @@ form.email p {
   color: white; }
 
 /* ------------------------------------------------------------
+   Single Blog
+   ------------------------------------------------------------ */
+.table-item h4 {
+  border-bottom: 2px #205988 solid;
+  min-height: 50px;
+  text-align: center; }
+
+.table-2 .table-item {
+  padding: 4px;
+  width: 50%; }
+
+.table-5 .table-item {
+  width: 20%; }
+  .table-5 .table-item p {
+    text-align: center; }
+
+/* ------------------------------------------------------------
    Testimonials
    ------------------------------------------------------------ */
 #tbtestimonials-widget {
