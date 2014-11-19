@@ -1625,19 +1625,23 @@ form.email p {
 /* ------------------------------------------------------------
    Single Blog
    ------------------------------------------------------------ */
-.table-item h4 {
-  border-bottom: 2px #205988 solid;
-  min-height: 50px;
-  text-align: center; }
-
 .table-2 .table-item {
   float: left;
   padding: 4px;
   width: 50%; }
+  .table-2 .table-item h4 {
+    border-bottom: 2px #205988 solid;
+    min-height: 50px;
+    text-align: center; }
 
 .table-5 .table-item {
   float: left;
+  padding: 4px;
   width: 20%; }
+  .table-5 .table-item h4 {
+    border-bottom: 2px #205988 solid;
+    min-height: 65px;
+    text-align: center; }
   .table-5 .table-item p {
     text-align: center; }
 
