@@ -1981,6 +1981,10 @@ form.email p label {
     float: none;
     width: 100%;
   }
+  .table-5 .table-item h4 {
+    min-height: auto;
+    padding-bottom: 4px;
+  }
 }
 
 /* ------------------------------------------------------------
