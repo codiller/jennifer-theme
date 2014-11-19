@@ -1653,7 +1653,7 @@ form.email p {
       float: none;
       width: 100%; }
       .table-5 .table-item h4 {
-        min-height: auto;
+        min-height: inherit;
         padding-bottom: 4px; } }
 
 /* ------------------------------------------------------------
