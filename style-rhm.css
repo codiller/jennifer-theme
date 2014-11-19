@@ -1625,6 +1625,10 @@ form.email p {
 /* ------------------------------------------------------------
    Single Blog
    ------------------------------------------------------------ */
+.table-2,
+.table-5 {
+  overflow: hidden; }
+
 .table-2 .table-item {
   float: left;
   padding: 4px;
