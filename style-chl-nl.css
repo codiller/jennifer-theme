@@ -1631,10 +1631,12 @@ form.email p {
   text-align: center; }
 
 .table-2 .table-item {
+  float: left;
   padding: 4px;
   width: 50%; }
 
 .table-5 .table-item {
+  float: left;
   width: 20%; }
   .table-5 .table-item p {
     text-align: center; }
