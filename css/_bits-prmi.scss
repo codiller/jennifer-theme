@@ -1,0 +1,62 @@
+// ------------------------------------------------------------
+// Logo Size
+// ------------------------------------------------------------
+
+$logo-url: url('images/logo-prmi.png');
+$logo-url-2x: url('images/logo-prmi@2x.png');
+
+$logo-width: 300px;
+$logo-height: 75px;
+
+$logo-margin-tb: 16px;
+$logo-margin-lr: 16px;
+
+// ------------------------------------------------------------
+// Font
+// ------------------------------------------------------------
+
+@mixin font-heading {
+	font-family: 'Open Sans', sans-serif;
+}
+
+@mixin font-copy {
+	font-family: 'Droid Serif', serif;
+}
+
+// ------------------------------------------------------------
+// Theme Colors
+// ------------------------------------------------------------
+
+// Base Shading / Shadows
+
+$sh-dark: rgba( 74, 77, 85, 1.0 ); //CG10
+$sh-medium: rgba( 173, 174, 174, 1.0 ); //CG5
+$sh-light: rgba( 220, 220, 218, 1.0 ); //CG2
+$sh-very-light: rgba( 228, 229, 227, 1.0 ); //CG1
+
+// Calls to Action
+
+// This is the color of buttons, text, and backgrounds that lead the user to a specific call to action.
+$cta: rgba( 239, 115, 10, 1.0 ); //Orange 021
+// This is the color of the button text.
+$cta-text: white;
+
+// Main Colors
+
+// This is the color of the navigation, links, heading 1, and other items.
+$color1: rgba( 0, 37, 84, 1.0 ); //655
+// This is the color of the heading 2, and other items.
+$color2: rgba( 74, 77, 84, 1.0 ); //CG10
+// This is the color of the heading 3, and other items.
+$color3: rgba( 124, 37, 41, 1.0 ); //
+// This is the color of the heading 4, and other items.
+$color4: rgba( 163, 190, 207, 1.0 );
+
+// ------------------------------------------------------------
+// Default Margins / Padding
+// ------------------------------------------------------------
+
+// This is the default margin size for the theme.
+$dm: 24px;
+// This is the default padding size for the theme.
+$dp: 24px;

@@ -1,0 +1,223 @@
+// ------------------------------------------------------------
+// Sass Functions
+// ------------------------------------------------------------
+
+@function strip-units( $number ) {
+	@return $number / ( $number * 0 + 1 );
+}
+
+@function margin( $tb, $lr ) {
+	@return #{$tb}px, #{$lr}px;
+}
+
+@function title-width( $logo-width, $logo-margin-tb, $factor: 1 ) {
+	@return $logo-width + ( 2 * $logo-margin-tb * $factor );
+}
+
+@function header-height( $size, $factor: 1.375 ) {
+	@return ( ( $logo-height + ( 2 * $logo-margin-tb ) ) - ( $size * $factor ) ) / 2;
+}
+
+// ------------------------------------------------------------
+// Logo Size
+// ------------------------------------------------------------
+
+$title-width: title-width( $logo-width, $logo-margin-tb );
+
+// ------------------------------------------------------------
+// Device Widths
+// ------------------------------------------------------------
+
+$full: 1152px;
+$break-large: 960px;
+$break-mid: 768px;
+$break-mobile: 576px;
+
+@mixin respond( $media ) {
+	@if $media == full {
+		@media only screen and (max-width: $full ) { @content; }
+	}
+	@else if $media == large {
+		@media only screen and ( max-width: $break-large ) { @content; }
+	}
+	@else if $media == mid {
+		@media only screen and ( max-width: $break-mid ) { @content; }
+	}
+	@else if $media == mobile {
+		@media only screen and ( max-width: $break-mobile ) { @content; }
+	}
+}
+
+@mixin wrap {
+	margin: 0 auto;
+	overflow: hidden;
+	width: $full;
+
+	@include respond( full ) {
+		max-width: $break-large;
+	}
+
+	@include respond( large ) {
+		width: 95%;
+	}
+
+}
+
+// ------------------------------------------------------------
+// Mixins - Margins & Padding
+// ------------------------------------------------------------
+
+@mixin m( $tb, $lr: $tb ) {
+	margin: #{strip-units($tb)}px #{strip-units($lr)}px;
+	margin: #{strip-units($tb)/strip-units($default-font-size * $default-rem-adjustment / 100)}rem #{strip-units($lr)/strip-units($default-font-size * $default-rem-adjustment / 100)}rem;
+}
+
+@mixin p( $tb, $lr: $tb ) {
+	padding: #{strip-units($tb)}px #{strip-units($lr)}px;
+	padding: #{strip-units($tb)/strip-units($default-font-size * $default-rem-adjustment / 100)}rem #{strip-units($lr)/strip-units($default-font-size * $default-rem-adjustment / 100)}rem;
+}
+
+@mixin ms( $area, $size ) {
+	margin-#{$area}: #{strip-units($size)}px;
+	margin-#{$area}: #{strip-units($size)/strip-units($default-font-size * $default-rem-adjustment / 100)}rem;
+}
+
+@mixin ps( $area, $size ) {
+	padding-#{$area}: #{strip-units($size)}px;
+	padding-#{$area}: #{strip-units($size)/strip-units($default-font-size * $default-rem-adjustment / 100)}rem;
+}
+
+// ------------------------------------------------------------
+// Columns
+// ------------------------------------------------------------
+
+@mixin columns( $c: 2, $m: $dm, $respond: no, $pc: 3 ) {
+	@if( $respond == yes ) {
+		&:nth-child( #{$pc}n ) {
+			margin-right: percentage( strip-units($m) / strip-units($full) );
+		}
+		&:nth-child( #{$pc}n + 1 ) {
+			clear: none;
+		}
+	}
+	float: left;
+	margin-bottom: #{ strip-units($m) }px;
+	margin-right: percentage( strip-units($m) / strip-units($full) );
+	width: ( 100 - ( ( $c - 1 ) * percentage( strip-units($m) / strip-units($full) ) ) ) / $c;
+	&:nth-child( #{$c}n ) {
+		margin-right: 0;
+	}
+	&:nth-child( #{$c}n + 1 ) {
+		clear: left;
+	}
+}
+
+// ------------------------------------------------------------
+// Font
+// ------------------------------------------------------------
+
+$default-rem-adjustment: 62.5%;
+$default-font-size: 16px;
+
+@mixin font( $size ) {
+	font-size: #{ $size }px;
+	font-size: #{ $size / strip-units( $default-font-size * $default-rem-adjustment / 100 ) }rem;
+}
+
+// ------------------------------------------------------------
+// Mixins - Buttons
+// ------------------------------------------------------------
+
+@mixin button( $size, $radius: 0px, $shadow-size: -3px, $color: $cta, $shadow: darken( $cta, 20% ) ) {
+	background: $color;
+	border: none;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+	-webkit-box-shadow: 0px $shadow-size $shadow inset;
+	-moz-box-shadow: 0px $shadow-size $shadow inset;
+	box-shadow: 0px $shadow-size $shadow inset;
+	color: $cta-text;
+	display: inline-block;
+	@include font-heading;
+	font-weight: 700;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	-moz-transition: all 0.1s ease-in-out;
+	-webkit-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+	&:hover {
+		background: $shadow;
+		color: white;
+	}
+	@if $size == lg {
+		@include font( 32 );
+		@include p( 24, 40 );
+	}
+	@else if $size == md {
+		@include font( 24 );
+		@include p( 12, 20 );
+	}
+	@else if $size == sm {
+		@include font( 18 );
+		@include p( 6, 10 );
+	}
+}
+
+// ------------------------------------------------------------
+// Mixins - Gradients
+// ------------------------------------------------------------
+
+@mixin gradient-cta {
+	background: $cta; /* Old browsers */
+	background: -moz-linear-gradient(top,  $cta 0%, darken( $cta, 20% ) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$cta), color-stop(100%,darken( $cta, 20% ))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  $cta 0%,darken( $cta, 20% ) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  $cta 0%,darken( $cta, 20% ) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  $cta 0%,darken( $cta, 20% ) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  $cta 0%,darken( $cta, 20% ) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$cta', endColorstr='darken( $cta, 20% )',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin gradient-sh( $shadow ) {
+	background: $shadow; /* Old browsers */
+	background: -moz-linear-gradient(top,  $shadow 0%, darken( $shadow, 20% ) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$shadow), color-stop(100%,darken( $shadow, 20% ))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  $shadow 0%,darken( $shadow, 20% ) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  $shadow 0%,darken( $shadow, 20% ) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  $shadow 0%,darken( $shadow, 20% ) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  $shadow 0%,darken( $shadow, 20% ) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$shadow', endColorstr='darken( $shadow, 20% )',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin gradient-one {
+	background: $color1; /* Old browsers */
+	background: -moz-linear-gradient(top,  $color1 0%, darken( $color1, 20% ) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1), color-stop(100%,darken( $color1, 20% ))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  $color1 0%,darken( $color1, 20% ) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  $color1 0%,darken( $color1, 20% ) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  $color1 0%,darken( $color1, 20% ) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  $color1 0%,darken( $color1, 20% ) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='darken( $color1, 20% )',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin gradient-two {
+	background: $color2; /* Old browsers */
+	background: -moz-linear-gradient(top,  $color2 0%, darken( $color2, 20% ) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color2), color-stop(100%,darken( $color2, 20% ))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  $color2 0%,darken( $color2, 20% ) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  $color2 0%,darken( $color2, 20% ) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  $color2 0%,darken( $color2, 20% ) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  $color2 0%,darken( $color2, 20% ) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color2', endColorstr='darken( $color2, 20% )',GradientType=0 ); /* IE6-9 */
+}
+
+// ------------------------------------------------------------
+// Mixins - Other
+// ------------------------------------------------------------
+
+@mixin lines-s {
+	border-left: 1px white solid;
+	border-right: 1px white solid;
+}

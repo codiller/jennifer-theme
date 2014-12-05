@@ -1,0 +1,324 @@
+/* ------------------------------------------------------------
+   Page - Home
+   ------------------------------------------------------------ */
+
+/* Home Feature Widget Area */
+
+.home-feature {
+	margin-top: -( $logo-height + ( 2 * $logo-margin-tb ) + 52px );
+	z-index: 1;
+	h3 {
+		background: transparentize( white, 0.25 );
+		color: $sh-dark;
+		@include font( 48 );
+		@include p( 16 );
+	}
+	.home-feature-cta {
+		@include p( 16, 0 );
+		background: transparentize( $sh-dark, 0.5 );
+		overflow: hidden;
+	}
+	.btn {
+		@include button( lg );
+	}
+
+	@include respond( large ) {
+		margin-top: 0;
+		h3 {
+			@include font( 36 );
+			@include p( 12 );
+		}
+		.home-feature-cta {
+			@include ps( top, 12 );
+			p {
+				@include ms( bottom, 12 );
+			}
+		}
+		.btn {
+			@include button( md );
+		}
+	}
+
+	@include respond( mid ) {
+		h3 {
+			@include font( 24 );
+			@include p( 8 );
+		}
+		.home-feature-cta {
+			@include ps( top, 8 );
+			p {
+				@include ms( bottom, 8 );
+			}
+		}
+		.btn {
+			@include button( sm );
+		}
+	}
+
+	@include respond( mobile ) {
+		h3 {
+			@include font( 16 );
+			@include p( 4 );
+		}
+		.home-feature-cta {
+			@include ps( top, 4 );
+			p {
+				@include ms( bottom, 4 );
+			}
+		}
+	}
+
+}
+
+/* Home Tabs Widget Area */
+
+.home-tabs {
+	.tab-content {
+		overflow: hidden;
+	}
+}
+
+/* Home Tabs Widget Area 3 */
+
+.three-reasons {
+	clear: both;
+	text-align: center;
+	li {
+		display: inline-block;
+		font-size: 20px;
+		list-style: none;
+		padding: 8px 0 8px 44px;
+	}
+
+	@include respond( full ) {
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+}
+
+/* Home Loop */
+
+.home-loop .entry {
+	@include columns( 3, 24 );
+
+	@include respond( large ) {
+		@include columns( 2 );
+		img {
+			width: 100%;
+		}
+	}
+
+	@include respond( mid ) {
+		@include columns( 1 );
+	}
+
+}
+
+/* Home Footer Testimonials Slider */
+
+.home-testimonials .rsTmb {
+	@extend h3;
+}
+
+/* ------------------------------------------------------------
+   Page Template - Employee Directory
+   ------------------------------------------------------------ */
+
+.directory-category-heading {
+	margin: 16px 0;
+}
+
+.directory-listings {
+	overflow: hidden;
+}
+
+.directory-listings .employees {
+	@include columns( 3 );
+	h2.entry-title a {
+		@include font( 20 );
+	}
+	li {
+		list-style: none;
+		padding: 0;
+	}
+	.employee-info {
+		padding: 0;
+		li {
+			&.emp-title {
+				font-style: italic;
+			}
+			&.emp-mobile-phone {
+				@include font( 20 );
+				font-weight: 400;
+			}
+		} 
+	}
+	.employee-actions {
+		@include ms( top, 16 );
+		padding: 0;
+		li {
+			display: inline-block;
+			&.emp-bio {
+				@include ps( right, 8 );
+			}
+			&.emp-apply a {
+				@extend .btn-sm;
+			}
+		}
+	}
+
+	@include respond( full ) {
+		@include columns( 2, $respond: yes, $pc: 3 );
+	}
+
+	@include respond( mobile ) {
+		@include columns( 1, $respond: yes, $pc: 2 );
+	}
+
+}
+
+/* ------------------------------------------------------------
+   Single Template - Employee
+   ------------------------------------------------------------ */
+
+.single-employees.content-sidebar .content {
+	float: left;
+	width: 66.66666666%;
+
+	@include respond( mobile ) {
+		float: none;
+		width: 100%;
+	}
+
+}
+
+.single-employees .sidebar-primary {
+	float: right;
+	margin-left: percentage( $dm / $full );
+	width: 33.33333333% - percentage( $dm / $full );
+
+	@include respond( mobile ) {
+		float: none;
+		margin-left: 0;
+		width: 100%;
+	}
+
+}
+
+.single-employees .menu-directory a {
+	background: $color1;
+	color: white;
+}
+
+.single-employees .employee-actions {
+	overflow: hidden;
+	@include ms( bottom, 16 );
+	@include ps( bottom, 6 );
+	text-align: center;
+	li {
+		display: inline-block;
+		&.apply a {
+			@extend .btn-sm;
+		}
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+.single-employees .employee-photo {
+	border: 8px $sh-light solid;
+	line-height: 0;
+}
+
+.single-employees .employee-info {
+	list-style: none;
+	padding: 0;
+	li {
+		padding: 8px 0 8px 28px;
+		padding: 0.8rem 0 0.8rem 2.8rem;
+		&.emp-main-phone,
+		&.emp-mobile-phone {
+			background: url('images/icon_phone.png') no-repeat left center;
+		}
+		&.emp-fax {
+			background: url('images/icon_fax.png') no-repeat left center;
+		}
+		&.emp-website {
+			background: url('images/icon_web.png') no-repeat left center;
+		}
+	}
+}
+
+/* ------------------------------------------------------------
+   Single Template - Loan Products
+   ------------------------------------------------------------ */
+
+.loan-products-overview {
+	.loan-products {
+		@include columns( 2, 32 );
+		@include ms( bottom, $dm )
+	}
+}
+
+/* ------------------------------------------------------------
+   Single Template - Loan Products
+   ------------------------------------------------------------ */
+
+.single-loan-products {
+	.menu-item-307 a {
+		background: $color1;
+		color: white;
+	}
+	.sidebar .btn {
+		@include p( 8px, 12px );
+	}
+	.sidebar h4 {
+		color: white;
+	}
+}
+
+/* ------------------------------------------------------------
+   Single Blog
+   ------------------------------------------------------------ */
+
+.table-2,
+.table-5 {
+	overflow: hidden;
+}
+
+.table-2 .table-item {
+	float: left;
+	padding: 4px;
+	width: 50%;
+	h4 {
+		border-bottom: 2px $color4 solid;
+		padding-bottom: 4px;
+		text-align: center;
+	}
+}
+
+.table-5 .table-item {
+	float: left;
+	padding: 4px;
+	width: 20%;
+	h4 {
+		border-bottom: 2px $color4 solid;
+		min-height: 65px;
+		text-align: center;
+	}
+	p {
+		text-align: center;
+	}
+
+	@include respond( mobile ) {
+		float: none;
+		width: 100%;
+		h4 {
+			min-height: inherit;
+			padding-bottom: 4px;
+		}
+	}
+
+}

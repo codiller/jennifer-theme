@@ -1,0 +1,193 @@
+/* ------------------------------------------------------------
+   Landing Page
+   ------------------------------------------------------------ */
+
+.landing-page {
+
+	/* ---------- Defaults ---------- */
+
+	h1 {
+		@include font( 48 );
+
+		@include respond( mobile ) {
+			@include font( 36 );
+		}
+
+	}
+	h2 {
+		@include font( 36 );
+
+		@include respond( mobile ) {
+			@include font( 30 );
+		}
+
+	}
+	p,
+	ul {
+		@include ms( bottom, $dm );
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.header-widget-area .widget {
+		@include m( 16 );
+		.phone {
+			color: $color1;
+			@include font( 48 );
+			font-weight: 700;
+			@include ps( top, 8 );
+		}
+	}
+	.site-inner {
+		padding: 0;
+		.wrap {
+			width: 100%;
+		}
+		.entry {
+			overflow: hidden;
+			padding: 0;
+		}
+	}
+	
+	/* ---------- Intro ---------- */
+
+	.intro {
+		background: url( 'images/top-bg.jpg' ) no-repeat center center;
+		background-size: cover;
+		@include p( $dp, 0 );
+		h1 {
+			@include ms( bottom, $dm );
+		}
+		h2 {
+			color: $color1;
+			@include ms( bottom, $dm );
+		}
+		p,
+		ul,
+		li {
+			@include font( 24 );
+		}
+		.bg-lighten {
+			background: rgba( 255, 255, 255, 1.0 );
+			overflow: hidden;
+			@include p( $dp );
+		}
+		.cta {
+			background: $cta;
+			// @include radius( 16 );
+			@include p( $dp );
+			h1,
+			h2,
+			p,
+			label {
+				color: white;
+			}
+			p {
+				@include font( 16 );
+				@include ms( bottom, $dm );
+			}
+			.gform_wrapper {
+				.gfield_label {
+					float: left;
+					@include p( 11, 0 );
+					width: 30%;
+				}
+				.ginput_container {
+					float: left;
+					width: 70%;
+				}
+				input[type=text],
+				input[type=email],
+				input[type=tel] {
+					border: 1px solid $cta;
+					padding: 10px;
+				}
+				input[type=submit] {
+					// @extend .btn-md-border-white;
+					width: 100%;
+				}
+				.gform_confirmation_message {
+					color: $sh-dark;
+				}
+			}
+		}
+
+		@include respond( mobile) {
+			p,
+			ul,
+			li {
+				@include font( 18 );
+			}
+		}
+
+	}
+	
+	/* ---------- Benefits ---------- */
+
+	.benefits {
+		@include p( $dp * 2, 0 );
+		p {
+			@include font( 20 );
+		}
+		li {
+			@include font( 18 );
+			line-height: 1.5;
+		}
+		.benefit-image {
+			float: left;
+			@include ms( right, $dm );
+			@include ms( top, $dm );
+			width: 176px;
+		}
+
+		@include respond( large ) {
+			text-align: center;
+			h2,
+			p {
+				padding: 0;
+			}
+			.benefit-image {
+				float: none;
+				@include ms( right, 0 );
+			}
+		}
+	}
+	
+	/* ---------- Testimonials ---------- */
+
+	.testimonials {
+		background: $color1;
+		color: white;
+		@include p( $dp * 2, 0 );
+		.testimonial{
+			// @extend .three-col;
+		}
+		h1 {
+			color: white;
+			@include ms( bottom, $dm * 2 );
+		}
+		h3 {
+			color: white;
+		}
+		img {
+			@include ms( bottom, $dm );
+		}
+		p.quote {
+			background: url( 'images/img_quote.png' ) no-repeat;
+			line-height: 1.5;
+			@include ps( left, 48 );
+		}
+	}
+	
+	/* ---------- Callout Two ---------- */
+
+	.callout-two {
+		background: white;
+		@include p( $dp * 2, 0 );
+		text-align: center;
+		h2 {
+			color: $cta;
+		}
+	}
+
+}

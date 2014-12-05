@@ -1,0 +1,114 @@
+/* ------------------------------------------------------------
+   WordPress Classes
+   ------------------------------------------------------------ */
+
+.alignleft {
+	text-align: left;
+}
+
+.aligncenter {
+	text-align: center;
+}
+
+.alignright {
+	text-align: right;
+}
+
+/* ------------------------------------------------------------
+   Layout Classes
+   ------------------------------------------------------------ */
+
+.floatleft {
+	float: left;
+}
+
+.center {
+	text-align: center;
+}
+
+/* ------------------------------------------------------------
+   Column Classes
+   ------------------------------------------------------------ */
+
+.full {
+	margin-right: 0;
+	width: 100%;
+}
+
+.half {
+	@include columns( 2, $dm );
+
+	@include respond( mid ) {
+		float: none;
+		margin-right: 0;
+		width: 100%;
+	}
+
+}
+
+.third {
+	@include columns( 3, $dm );
+}
+
+/* ------------------------------------------------------------
+   Button Classes
+   ------------------------------------------------------------ */
+
+.btn-sm {
+	@include button( sm );
+}
+
+.btn-md {
+	@include button( md );
+}
+
+.btn-lg {
+	@include button( lg, $shadow-size: -6px );
+}
+
+/* ------------------------------------------------------------
+   Gradient Classes
+   ------------------------------------------------------------ */
+
+
+
+/* ------------------------------------------------------------
+   Custom Classes
+   ------------------------------------------------------------ */
+
+.one {
+	background: url('images/img_one.png') no-repeat;
+	background-size: 36px 36px;
+	@media (-webkit-min-device-pixel-ratio: 2),
+	(min-resolution: 192dpi) {
+		background: url('images/img_one@2x.png') no-repeat;
+		background-size: 36px 36px;
+	}
+	padding-left: 80px;
+}
+
+.two {
+	background: url('images/img_two.png') no-repeat;
+	background-size: 36px 36px;
+	@media (-webkit-min-device-pixel-ratio: 2),
+	(min-resolution: 192dpi) {
+		background: url('images/img_two@2x.png') no-repeat;
+		background-size: 36px 36px;
+	}
+	padding-left: 80px;
+}
+
+.three {
+	background: url('images/img_three.png') no-repeat;
+	background-size: 36px 36px;
+	@media (-webkit-min-device-pixel-ratio: 2),
+	(min-resolution: 192dpi) {
+		background: url('images/img_three@2x.png') no-repeat;
+		background-size: 36px 36px;
+	}
+	padding-left: 80px;
+}
+
+.disclosure {
+	@include font( 12 );
+}
