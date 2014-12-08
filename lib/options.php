@@ -182,6 +182,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 				<option value="tlc"<?php selected( $current_company, 'tlc' ); ?>>*Top Left Creative*</option>
 				<option value="chl"<?php selected( $current_company, 'chl' ); ?>>Citywide Home Loans</option>
 				<option value="chl-nl"<?php selected( $current_company, 'chl-nl' ); ?>>Nick Lovato @ Citywide Home Loans</option>
+				<option value="elevate"<?php selected( $current_company, 'elevate' ); ?>>Elevate Mortgage Group</option>
 				<option value="guild"<?php selected( $current_company, 'guild' ); ?>>Guild Mortgage Company</option>
 				<option value="nwmg"<?php selected( $current_company, 'nwmg' ); ?>>Northwest Mortgage Group</option>
 				<option value="prmi"<?php selected( $current_company, 'prmi' ); ?>>Primary Residential Mortgage, Inc.</option>

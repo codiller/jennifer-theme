@@ -1,3 +1,14 @@
 /config.codekit
 /.sass-cache/
 .DS_Store
+css
+*.scss
+editor-style.scss
+style-chl-nl.scss
+style-chl.scss
+style-elevate.scss
+style-guild.scss
+style-nwmg.scss
+style-prmi.scss
+style-rhm.scss
+style.scss
