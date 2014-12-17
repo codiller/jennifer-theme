@@ -86,7 +86,6 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 				'individual_nmls',
 				'address',
 				'phone',
-				'disclaimer',
 				'company_selector',
 				'website_type',
 				'include_homepage_blog',
@@ -100,6 +99,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 
 		genesis_add_option_filter( 'safe_html', $this->settings_field,
 			array(
+				'disclaimer',
 				'locations_page',
 			) );
 	}
