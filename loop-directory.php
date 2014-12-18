@@ -55,10 +55,8 @@
 		// Add employee buttons ?>
 		<ul class="employee-actions">
 			<li class="emp-bio"><a href="<?php echo the_permalink(); ?>" class="learn-more">More info...</a></li>
-			<?php if( get_post_meta( get_the_ID(), 'wpcf-licensed-to-originate', true ) && get_post_meta( get_the_ID(), 'wpcf-online-application-link', true ) ) { ?>
+			<?php if( get_post_meta( get_the_ID(), 'wpcf-online-application-link', true ) ) { ?>
 				<li class="emp-apply"><a href="<?php echo get_post_meta( get_the_ID(), 'wpcf-online-application-link', true ); ?>" class="btn" target="_blank">Apply Now</a></li>
-			<?php } elseif( get_post_meta( get_the_ID(), 'wpcf-licensed-to-originate', true ) ) { ?>
-				<li class="emp-apply"><a href="<?php echo home_url(); ?>/apply-now" class="btn">Apply Now</a></li>
 			<?php } ?>
 		</ul><!-- end .employee-actions-->
 
